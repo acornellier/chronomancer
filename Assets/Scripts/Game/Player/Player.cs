@@ -2,6 +2,7 @@ using System;
 using Animancer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -60,7 +61,7 @@ public class Player : MonoBehaviour
         UpdateJump();
         UpdateDirection();
         UpdateShooting();
-        // UpdateAnimations();
+        UpdateAnimations();
     }
 
     void UpdateVelocity()
@@ -85,7 +86,6 @@ public class Player : MonoBehaviour
         {
             _body.AddForce(new Vector2(0, stats.jumpForce), ForceMode2D.Impulse);
             _jumpInput = false;
-
             _isJumping = true;
         }
         else if (_isJumping && _isFalling && _isGrounded)

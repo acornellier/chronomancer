@@ -2,7 +2,7 @@
 
 public class Wand : MonoBehaviour
 {
-    [SerializeField] Transform wandTip;
+    [SerializeField] public Transform wandTip;
     [SerializeField] Bolt bolt1Prefab;
     [SerializeField] Bolt bolt2Prefab;
 
