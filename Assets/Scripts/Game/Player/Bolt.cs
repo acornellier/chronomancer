@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -7,7 +8,7 @@ public class Bolt : MonoBehaviour
     [SerializeField] float speedMultiplier = 1;
     [SerializeField] float baseSpeed = 1f;
 
-    public Vector3 Direction { get; set; }
+    Vector3 _direction;
 
     LayerMask _contactMask;
 
@@ -18,7 +19,13 @@ public class Bolt : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(baseSpeed * Time.fixedDeltaTime * Direction);
+        transform.position += baseSpeed * Time.fixedDeltaTime * _direction;
+    }
+
+    public void SetDirection(Vector2 direction)
+    {
+        _direction = direction;
+        transform.right = _direction;
     }
 
     void OnTriggerEnter2D(Collider2D col)

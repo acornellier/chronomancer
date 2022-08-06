@@ -4,9 +4,11 @@ using Zenject;
 
 public class GameManager : ITickable
 {
+    [Inject] LevelLoader _levelLoader;
+    
     public void Tick()
     {
         if (Input.GetKeyDown(KeyCode.R))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            _levelLoader.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

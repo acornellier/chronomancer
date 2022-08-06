@@ -1,8 +1,9 @@
 using System;
+using System.Collections;
 using Animancer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+using Zenject;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] Wand wand;
     [SerializeField] Stats stats;
     [SerializeField] Animations animations;
+
+    [Inject] LevelLoader _levelLoader;
 
     Collider2D _collider;
     Rigidbody2D _body;
@@ -26,6 +29,8 @@ public class Player : MonoBehaviour
     bool _isGrounded;
     bool _isJumping;
     bool _isFalling;
+    bool _isAttacking;
+    bool _isDying;
 
     void Awake()
     {
@@ -97,6 +102,9 @@ public class Player : MonoBehaviour
 
     void UpdateAnimations()
     {
+        if (_isAttacking || _isDying)
+            return;
+
         if (_isFalling)
             _animancer.Play(animations.fall);
         else if (_isJumping)
@@ -120,12 +128,27 @@ public class Player : MonoBehaviour
             return;
 
         wand.Shoot(_shootType);
+        _isAttacking = true;
         _shootInput = false;
+        
+        var state = _animancer.Play(animations.attack);
+        state.Events.OnEnd += () => { 
+            _isAttacking = false;
+            _animancer.Play(animations.idle);
+        };
     }
 
     public void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(CO_Die());
+    }
+
+    IEnumerator CO_Die()
+    {
+        _isDying = true;
+        var state = _animancer.Play(animations.die);
+        yield return state;
+        _levelLoader.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     [Serializable]
@@ -142,5 +165,7 @@ public class Player : MonoBehaviour
         public AnimationClip walk;
         public AnimationClip jump;
         public AnimationClip fall;
+        public AnimationClip die;
+        public AnimationClip attack;
     }
 }

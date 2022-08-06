@@ -111,8 +111,8 @@ MonoBehaviour:
     idle: {fileID: 7400000, guid: 7eeb8eee753d749b58bb4ce6959fac1c, type: 2}
     walk: {fileID: 7400000, guid: b1235daf896814219957118a43202540, type: 2}
     jump: {fileID: 7400000, guid: 47cc01a9b362a4cd19cedcd96b7e59fb, type: 2}
-    jumpBolt: {fileID: 0}
     fall: {fileID: 7400000, guid: 7eeb8eee753d749b58bb4ce6959fac1c, type: 2}
+    attack: {fileID: 7400000, guid: 102703698d53f49a7a0d4aafac3ffb3d, type: 2}
 --- !u!70 &9216907560146110100
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wandTip: {fileID: 7967880215801092290}
   bolt1Prefab: {fileID: 5588036119209054225, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
-  bolt2Prefab: {fileID: 5588036119209054225, guid: bbb8f4039c6e1e6488b7d6724c87913d, type: 3}
+  bolt2Prefab: {fileID: 2603586428949778443, guid: 754dc59b1b5a441be88ebc1ebaf6747b, type: 3}
 --- !u!1 &7967880215801092300
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967880215801092300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.42, z: 0}
+  m_LocalPosition: {x: 0.286, y: 0.021, z: 0}
   m_LocalScale: {x: 0.38842133, y: 0.20459701, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

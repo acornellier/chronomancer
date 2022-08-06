@@ -12,7 +12,7 @@ public class Wand : MonoBehaviour
         var point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var direction = ((Vector2)(point - wandTip.position)).normalized;
         var bolt = Instantiate(boltPrefab, wandTip.position, Quaternion.identity);
-        bolt.Direction = direction;
+        bolt.SetDirection(direction);
     }
 
     public enum ShootType

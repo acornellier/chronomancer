@@ -86,9 +86,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 69
-        width: 32
-        height: 32
+        y: 37
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,10 +106,10 @@ TextureImporter:
       name: Bolt1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 69
-        width: 32
-        height: 32
+        x: 19
+        y: 37
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,10 +127,10 @@ TextureImporter:
       name: Bolt2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 69
-        width: 32
-        height: 32
+        x: 37
+        y: 37
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,9 +149,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 35
-        width: 32
-        height: 32
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,8 +159,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2610462d008ea83d0800000000000000
-      internalID: -3203493094693273246
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
       vertices: []
       indices: 
       edges: []
@@ -169,10 +169,10 @@ TextureImporter:
       name: Bolt4
       rect:
         serializedVersion: 2
-        x: 35
-        y: 35
-        width: 32
-        height: 32
+        x: 19
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b5d90a3c9909e8d0800000000000000
-      internalID: -2816709525350263367
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
       vertices: []
       indices: 
       edges: []
@@ -190,10 +190,10 @@ TextureImporter:
       name: Bolt5
       rect:
         serializedVersion: 2
-        x: 69
-        y: 35
-        width: 32
-        height: 32
+        x: 37
+        y: 19
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,29 +201,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c18f2fbb5ce949e0800000000000000
-      internalID: -1636517110778723903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bolt6
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1675b68717676890800000000000000
-      internalID: -7464884506601359843
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
       vertices: []
       indices: 
       edges: []
@@ -240,12 +219,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Bolt2: 2859374310022155281
-      Bolt4: -2816709525350263367
+      Bolt4: 0
       Bolt0: -2450347246652241001
-      Bolt3: -3203493094693273246
-      Bolt5: -1636517110778723903
+      Bolt3: 0
+      Bolt5: 0
       Bolt1: -2808503411044819584
-      Bolt6: -7464884506601359843
+      Bolt6: 0
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
