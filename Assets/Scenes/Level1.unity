@@ -438,6 +438,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &823210222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3616853578199936788, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+  m_PrefabInstance: {fileID: 3616853577772865384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &823210227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823210222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 48
+  m_RefResolutionX: 800
+  m_RefResolutionY: 500
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &862875876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,13 +1258,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3616853578199936791, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: orthographic size
+      value: 7.53125
+      objectReference: {fileID: 0}
     - target: {fileID: 3616853578199937000, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.412196
+      value: 4.2629375
       objectReference: {fileID: 0}
     - target: {fileID: 3616853578199937000, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5691674
+      value: 1.5728557
       objectReference: {fileID: 0}
     - target: {fileID: 3616853579694251248, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1257,6 +1286,14 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 374385945}
+    - target: {fileID: 3616853579694251263, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.599585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616853579694251263, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 7.53125
+      objectReference: {fileID: 0}
     - target: {fileID: 8322191199212555968, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -1327,7 +1364,7 @@ PrefabInstance:
     - target: {fileID: 7967880215193007587, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7607230761828614091, guid: 89788a067cc2f4d99b14179cb595fdba, type: 3}
+      objectReference: {fileID: -2921556822632914227, guid: 9371276d89f484c6a9e28b16775697dc, type: 3}
     - target: {fileID: 7967880215193007587, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -1343,7 +1380,7 @@ PrefabInstance:
     - target: {fileID: 7967880215193007596, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
       propertyPath: animations.idle
       value: 
-      objectReference: {fileID: 7400000, guid: c68432a3987ae4bdbbe0f88a2025aef1, type: 2}
+      objectReference: {fileID: 7400000, guid: 1164a18ef428e4415befbc86f0f2b04b, type: 2}
     - target: {fileID: 7967880215193007596, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
       propertyPath: animations.jump
       value: 

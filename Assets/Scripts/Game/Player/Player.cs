@@ -130,7 +130,8 @@ public class Player : MonoBehaviour
         wand.Shoot(_shootType);
         _isAttacking = true;
         _shootInput = false;
-        
+
+        _animancer.Stop();
         var state = _animancer.Play(animations.attack);
         state.Events.OnEnd += () => { 
             _isAttacking = false;

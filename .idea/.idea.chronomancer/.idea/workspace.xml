@@ -5,43 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f228a16-d995-4c11-8e1d-e42d2dd96aad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_FastBolt.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_FastBolt.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_SlowBolt.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_SlowBolt.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt.ase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_jumpBolt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_jumpBolt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Ground.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Ground.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2.ase" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2_die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2_die.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2_jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2_jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2_shoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard2/wizard2_shoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextureAtlasSlicer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextureAtlasSlicer/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextureAtlasSlicer/Editor/TextureAtlasSlicer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextureAtlasSlicer/Editor/TextureAtlasSlicer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextureAtlasSlicer/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextureAtlasSlicer/README.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoltFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BoltFast.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoltFast.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BoltFast.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoltSlow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BoltSlow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LevelCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LevelCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/red hood itch free Copy-Sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/red hood itch free Copy-Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_gesture.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_gesture.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Bolt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Bolt.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Wand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Wand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659727441188</updated>
-      <workItem from="1659727453304" duration="13560000" />
+      <workItem from="1659727453304" duration="14188000" />
     </task>
     <servers />
   </component>

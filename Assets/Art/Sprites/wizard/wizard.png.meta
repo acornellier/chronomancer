@@ -858,195 +858,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: wizard37
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 35
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09e8f2ba52f72d260800000000000000
-      internalID: 7120893760588713616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard38
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 35
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84448fd341180d1e0800000000000000
-      internalID: -2175096696080939960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard39
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 35
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 692b9926665543e50800000000000000
-      internalID: 6788144436583445142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard40
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 35
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff0df623ad5740d50800000000000000
-      internalID: 6702611725443649791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard41
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 35
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65382d7a1cd2d2fa0800000000000000
-      internalID: -5823948433352653994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard42
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 828548cc50c1f9230800000000000000
-      internalID: 3647665034425030696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard43
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 1
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2347fe80f43cbb480800000000000000
-      internalID: -8882291095838428110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard44
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 1
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ed9dc430d3fe63f0800000000000000
-      internalID: -905518399490253335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard45
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 1
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e0f8a96d1e6d11920800000000000000
-      internalID: 2959382695615565582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1073,12 +884,14 @@ TextureImporter:
       wizard42: 3647665034425030696
       wizard03: -1019008093502661850
       wizard08: -5348822750586039410
+      wizard47: 0
       wizard26: 5345170146065166989
       wizard36: 6074361603178839798
-      wizard28: 3801131526795476194
+      wizard46: 0
+      wizard15: 950148193357758411
       wizard20: 7432930609943953682
       wizard32: 5576969828637556474
-      wizard15: 950148193357758411
+      wizard28: 3801131526795476194
       wizard04: -903040263352724253
       wizard35: -5426887338980602656
       wizard22: -7434731312813565388
