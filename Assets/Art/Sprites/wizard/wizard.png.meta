@@ -86,7 +86,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 205
+        y: 171
         width: 32
         height: 32
       alignment: 0
@@ -107,7 +107,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 205
+        y: 171
         width: 32
         height: 32
       alignment: 0
@@ -128,7 +128,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 69
-        y: 205
+        y: 171
         width: 32
         height: 32
       alignment: 0
@@ -149,7 +149,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 103
-        y: 205
+        y: 171
         width: 32
         height: 32
       alignment: 0
@@ -170,7 +170,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 137
-        y: 205
+        y: 171
         width: 32
         height: 32
       alignment: 0
@@ -191,7 +191,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 171
-        y: 205
+        y: 171
         width: 32
         height: 32
       alignment: 0
@@ -211,8 +211,8 @@ TextureImporter:
       name: wizard06
       rect:
         serializedVersion: 2
-        x: 205
-        y: 205
+        x: 1
+        y: 137
         width: 32
         height: 32
       alignment: 0
@@ -232,8 +232,8 @@ TextureImporter:
       name: wizard07
       rect:
         serializedVersion: 2
-        x: 1
-        y: 171
+        x: 35
+        y: 137
         width: 32
         height: 32
       alignment: 0
@@ -253,8 +253,8 @@ TextureImporter:
       name: wizard08
       rect:
         serializedVersion: 2
-        x: 35
-        y: 171
+        x: 69
+        y: 137
         width: 32
         height: 32
       alignment: 0
@@ -274,8 +274,8 @@ TextureImporter:
       name: wizard09
       rect:
         serializedVersion: 2
-        x: 69
-        y: 171
+        x: 103
+        y: 137
         width: 32
         height: 32
       alignment: 0
@@ -295,8 +295,8 @@ TextureImporter:
       name: wizard10
       rect:
         serializedVersion: 2
-        x: 103
-        y: 171
+        x: 137
+        y: 137
         width: 32
         height: 32
       alignment: 0
@@ -316,8 +316,8 @@ TextureImporter:
       name: wizard11
       rect:
         serializedVersion: 2
-        x: 137
-        y: 171
+        x: 171
+        y: 137
         width: 32
         height: 32
       alignment: 0
@@ -337,8 +337,8 @@ TextureImporter:
       name: wizard12
       rect:
         serializedVersion: 2
-        x: 171
-        y: 171
+        x: 1
+        y: 103
         width: 32
         height: 32
       alignment: 0
@@ -358,8 +358,8 @@ TextureImporter:
       name: wizard13
       rect:
         serializedVersion: 2
-        x: 205
-        y: 171
+        x: 35
+        y: 103
         width: 32
         height: 32
       alignment: 0
@@ -379,8 +379,8 @@ TextureImporter:
       name: wizard14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 137
+        x: 69
+        y: 103
         width: 32
         height: 32
       alignment: 0
@@ -400,8 +400,8 @@ TextureImporter:
       name: wizard15
       rect:
         serializedVersion: 2
-        x: 35
-        y: 137
+        x: 103
+        y: 103
         width: 32
         height: 32
       alignment: 0
@@ -421,8 +421,8 @@ TextureImporter:
       name: wizard16
       rect:
         serializedVersion: 2
-        x: 69
-        y: 137
+        x: 137
+        y: 103
         width: 32
         height: 32
       alignment: 0
@@ -442,8 +442,8 @@ TextureImporter:
       name: wizard17
       rect:
         serializedVersion: 2
-        x: 103
-        y: 137
+        x: 171
+        y: 103
         width: 32
         height: 32
       alignment: 0
@@ -463,8 +463,8 @@ TextureImporter:
       name: wizard18
       rect:
         serializedVersion: 2
-        x: 137
-        y: 137
+        x: 1
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -484,8 +484,8 @@ TextureImporter:
       name: wizard19
       rect:
         serializedVersion: 2
-        x: 171
-        y: 137
+        x: 35
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -505,8 +505,8 @@ TextureImporter:
       name: wizard20
       rect:
         serializedVersion: 2
-        x: 205
-        y: 137
+        x: 69
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -526,8 +526,8 @@ TextureImporter:
       name: wizard21
       rect:
         serializedVersion: 2
-        x: 1
-        y: 103
+        x: 103
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -547,8 +547,8 @@ TextureImporter:
       name: wizard22
       rect:
         serializedVersion: 2
-        x: 35
-        y: 103
+        x: 137
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -568,8 +568,8 @@ TextureImporter:
       name: wizard23
       rect:
         serializedVersion: 2
-        x: 69
-        y: 103
+        x: 171
+        y: 69
         width: 32
         height: 32
       alignment: 0
@@ -589,8 +589,8 @@ TextureImporter:
       name: wizard24
       rect:
         serializedVersion: 2
-        x: 103
-        y: 103
+        x: 1
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -610,8 +610,8 @@ TextureImporter:
       name: wizard25
       rect:
         serializedVersion: 2
-        x: 137
-        y: 103
+        x: 35
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -631,8 +631,8 @@ TextureImporter:
       name: wizard26
       rect:
         serializedVersion: 2
-        x: 171
-        y: 103
+        x: 69
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -652,8 +652,8 @@ TextureImporter:
       name: wizard27
       rect:
         serializedVersion: 2
-        x: 205
-        y: 103
+        x: 103
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -673,8 +673,8 @@ TextureImporter:
       name: wizard28
       rect:
         serializedVersion: 2
-        x: 1
-        y: 69
+        x: 137
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -694,8 +694,8 @@ TextureImporter:
       name: wizard29
       rect:
         serializedVersion: 2
-        x: 35
-        y: 69
+        x: 171
+        y: 35
         width: 32
         height: 32
       alignment: 0
@@ -715,8 +715,8 @@ TextureImporter:
       name: wizard30
       rect:
         serializedVersion: 2
-        x: 69
-        y: 69
+        x: 1
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -736,8 +736,8 @@ TextureImporter:
       name: wizard31
       rect:
         serializedVersion: 2
-        x: 103
-        y: 69
+        x: 35
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -757,8 +757,8 @@ TextureImporter:
       name: wizard32
       rect:
         serializedVersion: 2
-        x: 137
-        y: 69
+        x: 69
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -778,8 +778,8 @@ TextureImporter:
       name: wizard33
       rect:
         serializedVersion: 2
-        x: 171
-        y: 69
+        x: 103
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -799,8 +799,8 @@ TextureImporter:
       name: wizard34
       rect:
         serializedVersion: 2
-        x: 205
-        y: 69
+        x: 137
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -820,8 +820,8 @@ TextureImporter:
       name: wizard35
       rect:
         serializedVersion: 2
-        x: 1
-        y: 35
+        x: 171
+        y: 1
         width: 32
         height: 32
       alignment: 0
@@ -833,27 +833,6 @@ TextureImporter:
       bones: []
       spriteID: 0ec0ff3d7b2dfa4b0800000000000000
       internalID: -5426887338980602656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wizard36
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 35
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6fe3fbad1b77c4450800000000000000
-      internalID: 6074361603178839798
       vertices: []
       indices: 
       edges: []
@@ -888,10 +867,10 @@ TextureImporter:
       wizard26: 5345170146065166989
       wizard36: 6074361603178839798
       wizard46: 0
-      wizard15: 950148193357758411
+      wizard28: 3801131526795476194
       wizard20: 7432930609943953682
       wizard32: 5576969828637556474
-      wizard28: 3801131526795476194
+      wizard15: 950148193357758411
       wizard04: -903040263352724253
       wizard35: -5426887338980602656
       wizard22: -7434731312813565388
