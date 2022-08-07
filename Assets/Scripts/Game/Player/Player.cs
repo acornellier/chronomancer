@@ -22,12 +22,13 @@ public class Player : MonoBehaviour
     LayerMask _groundMask;
 
     float _movementInput;
-    bool _jumpInput;
+    float _jumpInputTimestamp;
     bool _shootInput;
     Wand.ShootType _shootType;
 
     bool _isGrounded;
     bool _isJumping;
+    float _jumpingTimestamp;
     bool _isFalling;
     bool _isAttacking;
     bool _isDying;
@@ -44,8 +45,8 @@ public class Player : MonoBehaviour
     {
         _movementInput = Input.GetAxisRaw("Horizontal");
 
-        if (!_isJumping && Input.GetButtonDown("Jump"))
-            _jumpInput = true;
+        if (Input.GetButtonDown("Jump"))
+            _jumpInputTimestamp = Time.time;
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -84,16 +85,22 @@ public class Player : MonoBehaviour
 
     void UpdateJump()
     {
-        if (_isJumping && _body.velocity.y < 0)
-            _isFalling = true;
+        _body.gravityScale = stats.gravityForce;
 
-        if (_jumpInput && _isGrounded)
+        if (_isJumping && _body.velocity.y < 0)
         {
-            _body.AddForce(new Vector2(0, stats.jumpForce), ForceMode2D.Impulse);
-            _jumpInput = false;
-            _isJumping = true;
+            _isFalling = true;
+            _body.gravityScale *= stats.fallingGravityMultiplier;
         }
-        else if (_isJumping && _isFalling && _isGrounded)
+
+        if (_isGrounded && Time.time - _jumpInputTimestamp < stats.jumpInputBuffer)
+        {
+            _isJumping = true;
+            _jumpingTimestamp = Time.time;
+            _jumpInputTimestamp = 0;
+            _body.AddForce(new Vector2(0, stats.jumpForce), ForceMode2D.Impulse);
+        }
+        else if (_isJumping && _isGrounded && (_isFalling || (Time.time - _jumpingTimestamp > 0.1f)))
         {
             _isJumping = false;
             _isFalling = false;
@@ -147,6 +154,8 @@ public class Player : MonoBehaviour
     IEnumerator CO_Die()
     {
         _isDying = true;
+        _body.isKinematic = true;
+        _body.constraints = RigidbodyConstraints2D.FreezeAll;
         var state = _animancer.Play(animations.die);
         yield return state;
         _levelLoader.LoadScene(SceneManager.GetActiveScene().name);
@@ -157,6 +166,10 @@ public class Player : MonoBehaviour
     {
         public float walkSpeed = 5;
         public float jumpForce = 8;
+        public float gravityForce = 1;
+        public float fallingGravityMultiplier = 1.2f;
+        public float jumpInputBuffer = 0.1f;
+        // public float variableJumpMaxTime = 1f;
     }
 
     [Serializable]

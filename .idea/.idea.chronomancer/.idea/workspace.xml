@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f228a16-d995-4c11-8e1d-e42d2dd96aad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/red hood itch free Copy-Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/red hood itch free Copy-Sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_FastBolt.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_FastBolt.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_FastBolt.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Bolt/Bolt_FastBolt.anim.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_gesture.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_gesture.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Zenject.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BoltFast.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BoltFast.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3da7beaa1113408ea3c9fe3a3e48542730a00/f0/fe500e65/Character.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfae6bb523854baabad0df85cea8717e15d000/56/c4c04013/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfae6bb523854baabad0df85cea8717e15d000/a1/6b600ce5/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c798cdaacb3b415b96d785edb9c5a6331f800/18/c7fa1b39/Rigidbody2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/io.tinu.asepriteimporter@dce15fde71/Editor/Importers/AnimationImporter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/io.tinu.asepriteimporter@dce15fde71/Editor/Importers/GeneratedSpriteImporter.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -97,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659727441188</updated>
-      <workItem from="1659727453304" duration="14188000" />
+      <workItem from="1659727453304" duration="17196000" />
     </task>
     <servers />
   </component>

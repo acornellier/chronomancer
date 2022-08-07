@@ -1264,11 +1264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3616853578199937000, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.2629375
+      value: 4.258275
       objectReference: {fileID: 0}
     - target: {fileID: 3616853578199937000, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5728557
+      value: 1.5728338
       objectReference: {fileID: 0}
     - target: {fileID: 3616853579694251248, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1393,6 +1393,14 @@ PrefabInstance:
       propertyPath: animations.attack
       value: 
       objectReference: {fileID: 7400000, guid: 04dde65d1abe046b5ac7f91323909802, type: 2}
+    - target: {fileID: 7967880215193007596, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
+      propertyPath: stats.jumpInputBuffer
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7967880215193007596, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
+      propertyPath: stats.fallingGravityMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7967880215193007599, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
       propertyPath: m_Name
       value: Player
