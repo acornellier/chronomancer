@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Wand : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Wand : MonoBehaviour
     public void Shoot(ShootType shootType)
     {
         var boltPrefab = shootType == ShootType.Type1 ? bolt1Prefab : bolt2Prefab;
-        var point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var point = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         var direction = ((Vector2)(point - wandTip.position)).normalized;
         var bolt = Instantiate(boltPrefab, wandTip.position, Quaternion.identity);
         bolt.SetDirection(direction);

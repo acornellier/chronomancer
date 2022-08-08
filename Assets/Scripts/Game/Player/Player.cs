@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Animancer;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Zenject;
 
@@ -20,9 +21,10 @@ public class Player : MonoBehaviour
     Rigidbody2D _body;
     AnimancerComponent _animancer;
     ContactFilter2D _groundMask;
+    PlayerInputActions _playerControls;
 
     float _movementInput;
-    float _jumpInputTimestamp;
+    float _jumpInputTimestamp = float.NegativeInfinity;
     bool _shootInput;
     Wand.ShootType _shootType;
 
@@ -41,28 +43,35 @@ public class Player : MonoBehaviour
         _collider = GetComponent<Collider2D>();
         _body = GetComponent<Rigidbody2D>();
         _animancer = GetComponent<AnimancerComponent>();
-        _groundMask.useLayerMask = true;
         _groundMask.layerMask = LayerMask.GetMask("Ground");
+        _playerControls = new PlayerInputActions();
+    }
+
+    void OnEnable()
+    {
+        _playerControls.Player.Enable();
+        _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
+        _playerControls.Player.Fire1.performed += (_) => OnFireInput(Wand.ShootType.Type1);
+        _playerControls.Player.Fire2.performed += (_) => OnFireInput(Wand.ShootType.Type2);
+    }
+
+    void OnDisable()
+    {
+        _playerControls.Player.Disable();
     }
 
     void Update()
     {
-        print($"player {transform.position} {_isDying}");
-        _movementInput = Input.GetAxisRaw("Horizontal");
+        if (Keyboard.current.aKey.IsPressed())
+            _movementInput = -1;
+        else if (Keyboard.current.dKey.IsPressed())
+            _movementInput = 1;
+    }
 
-        if (Input.GetButtonDown("Jump"))
-            _jumpInputTimestamp = Time.time;
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            _shootInput = true;
-            _shootType = Wand.ShootType.Type1;
-        }
-        else if (Input.GetButtonDown("Fire2"))
-        {
-            _shootInput = true;
-            _shootType = Wand.ShootType.Type2;
-        }
+    void OnFireInput(Wand.ShootType shootType)
+    {
+        _shootInput = true;
+        _shootType = shootType;
     }
 
     void FixedUpdate()
@@ -111,17 +120,19 @@ public class Player : MonoBehaviour
             _body.gravityScale *= stats.fallingGravityMultiplier;
         }
 
+        if (_isJumping && _isGrounded && (_isFalling || Time.time - _jumpingTimestamp > 0.1f))
+        {
+            _isJumping = false;
+            _isFalling = false;
+        }
+
         if (_isGrounded && Time.time - _jumpInputTimestamp < stats.jumpInputBuffer)
         {
             _isJumping = true;
             _jumpingTimestamp = Time.time;
             _jumpInputTimestamp = 0;
+            _body.velocity = new Vector2(_body.velocity.x, 0);
             _body.AddForce(new Vector2(0, stats.jumpForce), ForceMode2D.Impulse);
-        }
-        else if (_isJumping && _isGrounded && (_isFalling || Time.time - _jumpingTimestamp > 0.1f))
-        {
-            _isJumping = false;
-            _isFalling = false;
         }
     }
 
@@ -167,7 +178,6 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        print("Player.Die()");
         StartCoroutine(CO_Die());
     }
 
