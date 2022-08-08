@@ -38,9 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 1442521753
     locked: 0
@@ -61,4 +58,7 @@ TagManager:
     locked: 0
   - name: Bolt
     uniqueID: 1723858335
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
