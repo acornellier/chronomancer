@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     Collider2D _collider;
     Rigidbody2D _body;
     AnimancerComponent _animancer;
-    LayerMask _groundMask;
+    ContactFilter2D _groundMask;
 
     float _movementInput;
     float _jumpInputTimestamp;
@@ -33,16 +33,21 @@ public class Player : MonoBehaviour
     bool _isAttacking;
     bool _isDying;
 
+    readonly RaycastHit2D[] _hitBuffer = new RaycastHit2D[8];
+    const float GroundEpsilon = 0.05f;
+
     void Awake()
     {
         _collider = GetComponent<Collider2D>();
         _body = GetComponent<Rigidbody2D>();
         _animancer = GetComponent<AnimancerComponent>();
-        _groundMask = LayerMask.GetMask("Ground");
+        _groundMask.useLayerMask = true;
+        _groundMask.layerMask = LayerMask.GetMask("Ground");
     }
 
     void Update()
     {
+        print($"player {transform.position} {_isDying}");
         _movementInput = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetButtonDown("Jump"))
@@ -80,7 +85,20 @@ public class Player : MonoBehaviour
 
     void UpdateGrounded()
     {
-        _isGrounded = _body.IsTouchingLayers(_groundMask);
+        _isGrounded = IsGrounded();
+    }
+
+    bool IsGrounded()
+    {
+        var numHits = _collider.Cast(Vector2.down, _groundMask, _hitBuffer, GroundEpsilon);
+        for (var hitIndex = 0; hitIndex < numHits; hitIndex++)
+        {
+            var hit = _hitBuffer[hitIndex];
+            if (hit.normal == Vector2.up)
+                return true;
+        }
+
+        return false;
     }
 
     void UpdateJump()
@@ -100,7 +118,7 @@ public class Player : MonoBehaviour
             _jumpInputTimestamp = 0;
             _body.AddForce(new Vector2(0, stats.jumpForce), ForceMode2D.Impulse);
         }
-        else if (_isJumping && _isGrounded && (_isFalling || (Time.time - _jumpingTimestamp > 0.1f)))
+        else if (_isJumping && _isGrounded && (_isFalling || Time.time - _jumpingTimestamp > 0.1f))
         {
             _isJumping = false;
             _isFalling = false;
@@ -140,7 +158,8 @@ public class Player : MonoBehaviour
 
         _animancer.Stop();
         var state = _animancer.Play(animations.attack);
-        state.Events.OnEnd += () => { 
+        state.Events.OnEnd += () =>
+        {
             _isAttacking = false;
             _animancer.Play(animations.idle);
         };
@@ -148,6 +167,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        print("Player.Die()");
         StartCoroutine(CO_Die());
     }
 
@@ -168,6 +188,7 @@ public class Player : MonoBehaviour
         public float jumpForce = 8;
         public float gravityForce = 1;
         public float fallingGravityMultiplier = 1.2f;
+
         public float jumpInputBuffer = 0.1f;
         // public float variableJumpMaxTime = 1f;
     }

@@ -80,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: 2079999809
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7416052054235827182, guid: 89788a067cc2f4d99b14179cb595fdba, type: 3}
+  m_Sprite: {fileID: -2921556822632914227, guid: 9371276d89f484c6a9e28b16775697dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -107,12 +107,16 @@ MonoBehaviour:
   stats:
     walkSpeed: 4
     jumpForce: 4
+    gravityForce: 1
+    fallingGravityMultiplier: 1.5
+    jumpInputBuffer: 0.15
   animations:
-    idle: {fileID: 7400000, guid: 7eeb8eee753d749b58bb4ce6959fac1c, type: 2}
-    walk: {fileID: 7400000, guid: b1235daf896814219957118a43202540, type: 2}
-    jump: {fileID: 7400000, guid: 47cc01a9b362a4cd19cedcd96b7e59fb, type: 2}
-    fall: {fileID: 7400000, guid: 7eeb8eee753d749b58bb4ce6959fac1c, type: 2}
-    attack: {fileID: 7400000, guid: 102703698d53f49a7a0d4aafac3ffb3d, type: 2}
+    idle: {fileID: 7400000, guid: 1164a18ef428e4415befbc86f0f2b04b, type: 2}
+    walk: {fileID: 7400000, guid: 8f3badfa9c1724ee6b5cb45c1d5a2c47, type: 2}
+    jump: {fileID: 7400000, guid: b8f173440b4a94bd0a8f6d6ae093ab33, type: 2}
+    fall: {fileID: 7400000, guid: c68432a3987ae4bdbbe0f88a2025aef1, type: 2}
+    die: {fileID: 7400000, guid: b9c992b1006534cf39f0b2ef60470763, type: 2}
+    attack: {fileID: 7400000, guid: 04dde65d1abe046b5ac7f91323909802, type: 2}
 --- !u!70 &9216907560146110100
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

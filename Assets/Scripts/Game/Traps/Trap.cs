@@ -23,7 +23,7 @@ public class Trap : MonoBehaviour
         {
             < 1 => Color.blue,
             > 1 => Color.red,
-            _ => Color.green,
+            _ => Color.white,
         };
     }
 }

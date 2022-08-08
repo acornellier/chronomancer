@@ -1,0 +1,979 @@
+fileFormatVersion: 2
+guid: e749322f7842ef747bda7b96b0012cb5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Toxic Trap - Level 100
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 463
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20080dbf659fa9d90800000000000000
+      internalID: -7090080511354175486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 101
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 463
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc9966d3eeb9c11d0800000000000000
+      internalID: -3378654172900058675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 102
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 463
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f24b160b9420120800000000000000
+      internalID: 2378544575107313432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 103
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 463
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa8cce11c8396640800000000000000
+      internalID: 5073648857306139301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 104
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 463
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5438d6828d0a80630800000000000000
+      internalID: 3893538728113439557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 105
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 463
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01845946fe659720800000000000000
+      internalID: 2852307943080362251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 106
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 397
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5330f43746a3720800000000000000
+      internalID: 2826682162538034629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 107
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 397
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e12c11f3b6a2bc0800000000000000
+      internalID: -3807112616363286899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 108
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 397
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc7c0441a44d2f30800000000000000
+      internalID: 4552370257763531976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 109
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 397
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf923be96d7d6db80800000000000000
+      internalID: -8370265540635973125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 110
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 397
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda95f64f74cf2ce0800000000000000
+      internalID: -1427706505922766115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 111
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 397
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107eae0e7d228d1f0800000000000000
+      internalID: -1020027005012613375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 112
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 331
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8637a629a61e720800000000000000
+      internalID: 2873695214322804907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 113
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 331
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f32c58bd13e0c70800000000000000
+      internalID: 8939137129288711998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 114
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 331
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe0e69c13d69a8b0800000000000000
+      internalID: -5140457439066452290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 115
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 331
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c028babee85f500800000000000000
+      internalID: 429406482329635911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 116
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 331
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfcb63dd4f4807ea0800000000000000
+      internalID: -5877051326500258564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 117
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 331
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf416db31156cb60800000000000000
+      internalID: 7765983752670498731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 118
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 265
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbeb706ba85da7cc0800000000000000
+      internalID: -3712420151077388609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 119
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 265
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d79edc54e29bad0800000000000000
+      internalID: -2686064825407537842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 120
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 265
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfa148bc54a965990800000000000000
+      internalID: -7397555713351607555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 121
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 265
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969e7b40e194726b0800000000000000
+      internalID: -5321204041437943447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 122
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 265
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26477cc9790c0070800000000000000
+      internalID: 8073838650694518315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 123
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 265
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c203fb6c379c5ac0800000000000000
+      internalID: -3865048094425808188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 124
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 199
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87b81f3fe956c190800000000000000
+      internalID: -7942562008730650737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 125
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 199
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdfe3f64a2975aa0800000000000000
+      internalID: -6172303529349284358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 126
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 199
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282470420d3cb1c30800000000000000
+      internalID: 4331270765371933314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 127
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 199
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b1d759913162a630800000000000000
+      internalID: 3936815889929195958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 128
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 199
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde3c15b10c460b50800000000000000
+      internalID: 6559013477528911583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 129
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 199
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fa915a30d521e70800000000000000
+      internalID: 9084425668595920773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 130
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 133
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 286b2218462e30150800000000000000
+      internalID: 5837758463293437570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 131
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 133
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f790ed376bdd417d0800000000000000
+      internalID: -2948488080323114625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 132
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 133
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60878e4edfba0fd0800000000000000
+      internalID: -2374874891963367314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 133
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 133
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ea00e5eb86eeb90800000000000000
+      internalID: -7210710786543407575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 134
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 133
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf8bd4e6b313bac0800000000000000
+      internalID: -3840704380972331069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 135
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 133
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130624e98b87f6520800000000000000
+      internalID: 2697507436142682161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 136
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 67
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bdd4796bf1e07d0800000000000000
+      internalID: -2950385836798125237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 137
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 67
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115777502a639d230800000000000000
+      internalID: 3664019841346925841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 138
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 67
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7650d219b52ffba0800000000000000
+      internalID: -6053077897347836294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Toxic Trap - Level 139
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 67
+        width: 96
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd45fcf625015f410800000000000000
+      internalID: 1510131196301890779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Toxic Trap - Level 128: 6559013477528911583
+      Toxic Trap - Level 108: 4552370257763531976
+      Toxic Trap - Level 125: -6172303529349284358
+      Toxic Trap - Level 110: -1427706505922766115
+      Toxic Trap - Level 137: 3664019841346925841
+      Toxic Trap - Level 126: 4331270765371933314
+      Toxic Trap - Level 107: -3807112616363286899
+      Toxic Trap - Level 104: 3893538728113439557
+      Toxic Trap - Level 120: -7397555713351607555
+      Toxic Trap - Level 102: 2378544575107313432
+      Toxic Trap - Level 130: 5837758463293437570
+      Toxic Trap - Level 116: -5877051326500258564
+      Toxic Trap - Level 121: -5321204041437943447
+      Toxic Trap - Level 111: -1020027005012613375
+      Toxic Trap - Level 112: 2873695214322804907
+      Toxic Trap - Level 101: -3378654172900058675
+      Toxic Trap - Level 136: -2950385836798125237
+      Toxic Trap - Level 131: -2948488080323114625
+      Toxic Trap - Level 118: -3712420151077388609
+      Toxic Trap - Level 105: 2852307943080362251
+      Toxic Trap - Level 113: 8939137129288711998
+      Toxic Trap - Level 134: -3840704380972331069
+      Toxic Trap - Level 115: 429406482329635911
+      Toxic Trap - Level 139: 1510131196301890779
+      Toxic Trap - Level 109: -8370265540635973125
+      Toxic Trap - Level 119: -2686064825407537842
+      Toxic Trap - Level 138: -6053077897347836294
+      Toxic Trap - Level 103: 5073648857306139301
+      Toxic Trap - Level 106: 2826682162538034629
+      Toxic Trap - Level 127: 3936815889929195958
+      Toxic Trap - Level 132: -2374874891963367314
+      Toxic Trap - Level 129: 9084425668595920773
+      Toxic Trap - Level 114: -5140457439066452290
+      Toxic Trap - Level 100: -7090080511354175486
+      Toxic Trap - Level 123: -3865048094425808188
+      Toxic Trap - Level 135: 2697507436142682161
+      Toxic Trap - Level 133: -7210710786543407575
+      Toxic Trap - Level 122: 8073838650694518315
+      Toxic Trap - Level 117: 7765983752670498731
+      Toxic Trap - Level 124: -7942562008730650737
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

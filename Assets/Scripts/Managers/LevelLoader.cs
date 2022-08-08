@@ -20,9 +20,9 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
-        #if !UNITY_EDITOR
+        // #if !UNITY_EDITOR
         StartCoroutine(StartLevel());
-        #endif
+        // #endif
     }
 
     public void LoadScene(string scene)

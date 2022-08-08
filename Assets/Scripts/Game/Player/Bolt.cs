@@ -37,7 +37,7 @@ public class Bolt : MonoBehaviour
         if (col.GetComponent<Player>())
             return;
 
-        if (_contactMask == (_contactMask | (1 << col.gameObject.layer)))
+        if (speedTracker || _contactMask == (_contactMask | (1 << col.gameObject.layer)))
             Destroy(gameObject);
     }
 }
