@@ -49,9 +49,11 @@ public class Player : MonoBehaviour
 
     void OnEnable()
     {
-        _playerControls.Player.Enable();
+        _playerControls.Player.Jump.Enable();
         _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
+        _playerControls.Player.Fire1.Enable();
         _playerControls.Player.Fire1.performed += (_) => OnFireInput(Wand.ShootType.Type1);
+        _playerControls.Player.Fire2.Enable();
         _playerControls.Player.Fire2.performed += (_) => OnFireInput(Wand.ShootType.Type2);
     }
 
@@ -188,7 +190,7 @@ public class Player : MonoBehaviour
         _body.constraints = RigidbodyConstraints2D.FreezeAll;
         var state = _animancer.Play(animations.die);
         yield return state;
-        _levelLoader.LoadScene(SceneManager.GetActiveScene().name);
+        _levelLoader.ReloadScene();
     }
 
     [Serializable]

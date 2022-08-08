@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: _Clip
       value: 
       objectReference: {fileID: 7400000, guid: 51d4e8feda5b742e2936c65150e6c295, type: 2}
+    - target: {fileID: 3004319874624150803, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.09860468
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004319874624150803, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3004319874624150803, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5588036119209054224, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
       propertyPath: m_Name
       value: BoltFast
@@ -30,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5588036119209054228, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5588036119209054228, guid: d3b5e873889f76e4f9f332b9c981ae6e, type: 3}
       propertyPath: m_LocalPosition.x

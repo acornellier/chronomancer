@@ -6,7 +6,5 @@ public class GameInstaller : MonoInstaller
     {
         Container.Bind<Player>().FromComponentInHierarchy().AsSingle();
         Container.Bind<LevelLoader>().FromComponentInHierarchy().AsSingle();
-
-        Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
     }
 }

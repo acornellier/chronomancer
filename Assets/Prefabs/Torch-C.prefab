@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Animator: {fileID: 3629232920486756125}
-  _Clip: {fileID: 0}
+  _Clip: {fileID: 7400000, guid: a85824b777a2d3249a64ae14cef25e45, type: 2}
   _Speed: 1
   _FootIK: 0
   _ApplyInEditMode: 0

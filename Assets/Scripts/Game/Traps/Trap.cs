@@ -10,6 +10,9 @@ public class Trap : MonoBehaviour
     Collider2D _collider;
     SpriteRenderer _renderer;
 
+    readonly Color _slowColor = new(0.25f, 0.25f, 0.75f);
+    readonly Color _fastColor = new(0.75f, 0.25f, 0.25f);
+
     protected virtual void Awake()
     {
         SpeedTracker = GetComponent<SpeedTracker>();
@@ -21,8 +24,8 @@ public class Trap : MonoBehaviour
     {
         _renderer.color = SpeedTracker.Multiplier switch
         {
-            < 1 => Color.blue,
-            > 1 => Color.red,
+            < 1 => _slowColor,
+            > 1 => _fastColor,
             _ => Color.white,
         };
     }

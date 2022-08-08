@@ -1,21 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(CanvasGroup))]
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] float fadeRate = 1;
 
-    CanvasGroup _canvasGroup;
-    // AsyncOperation _asyncLoad;
+    PlayerInputActions _playerControls;
 
-    public void Awake()
+    void Awake()
     {
-        _canvasGroup = GetComponent<CanvasGroup>();
-
-        // _asyncLoad = SceneManager.LoadSceneAsync(_settings.nextLevel.name);
-        // _asyncLoad.allowSceneActivation = false;
+        _playerControls = new PlayerInputActions();
     }
 
     void Start()
@@ -25,6 +23,22 @@ public class LevelLoader : MonoBehaviour
         // #endif
     }
 
+    void OnEnable()
+    {
+        _playerControls.Player.RestartLevel.Enable();
+        _playerControls.Player.RestartLevel.performed += (_) => ReloadScene();
+    }
+
+    void OnDisable()
+    {
+        _playerControls.Player.RestartLevel.Enable();
+    }
+
+    public void ReloadScene()
+    {
+        LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void LoadScene(string scene)
     {
         StartCoroutine(FadeToScene(scene));
@@ -32,20 +46,41 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator StartLevel()
     {
-        _canvasGroup.alpha = 1;
-        while (_canvasGroup.alpha > 0)
+        var lights = FindObjectsOfType<Light2D>();
+        var startingIntensities = lights.ToDictionary(l => l, l => l.intensity);
+
+        foreach (var l in lights)
         {
-            _canvasGroup.alpha -= fadeRate * Time.deltaTime;
+            l.intensity = 0;
+        }
+
+        var t = 0f;
+        while (t < 1)
+        {
+            t += fadeRate * Time.deltaTime;
+            foreach (var l in lights)
+            {
+                l.intensity = Mathf.Lerp(0f, startingIntensities[l], t);
+            }
+
             yield return null;
         }
     }
 
     IEnumerator FadeToScene(string scene)
     {
-        _canvasGroup.alpha = 0;
-        while (_canvasGroup.alpha < 1)
+        var lights = FindObjectsOfType<Light2D>();
+        var startingIntensities = lights.ToDictionary(l => l, l => l.intensity);
+
+        var t = 0f;
+        while (t < 1)
         {
-            _canvasGroup.alpha += fadeRate * Time.deltaTime;
+            t += fadeRate * Time.deltaTime;
+            foreach (var l in lights)
+            {
+                l.intensity = Mathf.Lerp(startingIntensities[l], 0f, t);
+            }
+
             yield return null;
         }
 
