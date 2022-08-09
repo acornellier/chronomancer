@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c07c5ea56644d42a9847cc83c46a063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+  nextScene: {fileID: 102900000, guid: a9667519ea877f949ac7ddb413bb63a6, type: 3}
 --- !u!212 &1835119581574154299
 SpriteRenderer:
   m_ObjectHideFlags: 0

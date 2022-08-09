@@ -14,7 +14,7 @@ public class LightFlicker : MonoBehaviour
     Queue<float> _smoothQueue;
     float _lastSum;
 
-    void Start()
+    void Awake()
     {
         _light = GetComponent<Light2D>();
         _smoothQueue = new Queue<float>(smoothing);

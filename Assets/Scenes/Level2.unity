@@ -7461,6 +7461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1835119581574154308, guid: eaac2aa831354bd4a844b6a2fa972831, type: 3}
+      propertyPath: nextScene
+      value: 
+      objectReference: {fileID: 102900000, guid: 34f87fe985b4b3547a6cee64f2ad907f, type: 3}
     - target: {fileID: 1835119581574154310, guid: eaac2aa831354bd4a844b6a2fa972831, type: 3}
       propertyPath: m_Name
       value: LevelEnd
@@ -7653,6 +7657,22 @@ PrefabInstance:
     - target: {fileID: 2485846733929112746, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616853578199937000, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616853578199937000, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616853579694251248, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616853579694251248, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: 3616853579694251249, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_BoundingShape2D
