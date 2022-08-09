@@ -5,6 +5,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D))]
 public class ColliderTrigger : MonoBehaviour
 {
+    [SerializeField] bool triggered;
+
     public event Action OnTriggered;
 
     void OnTriggerEnter2D(Collider2D col)
