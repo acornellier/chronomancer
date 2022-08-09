@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245cbe87424641348b520ddf8d72a1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralaxEffect: 1
+  parralaxEffect: 0.4
 --- !u!1 &3036714631262601887
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245cbe87424641348b520ddf8d72a1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralaxEffect: 1
+  parralaxEffect: 0.7
 --- !u!1 &3036714631571507658
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,7 +426,7 @@ Transform:
   - {fileID: 3036714631262601884}
   - {fileID: 3036714631117102631}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3036714632396056703
 GameObject:
@@ -525,4 +525,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245cbe87424641348b520ddf8d72a1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parralaxEffect: 1
+  parralaxEffect: 0.8

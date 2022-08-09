@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -31,7 +30,7 @@ public class LevelLoader : MonoBehaviour
 
     void OnDisable()
     {
-        _playerControls.Player.RestartLevel.Enable();
+        _playerControls.Player.RestartLevel.Disable();
     }
 
     public void ReloadScene()
@@ -71,6 +70,13 @@ public class LevelLoader : MonoBehaviour
     {
         var lights = FindObjectsOfType<Light2D>();
         var startingIntensities = lights.ToDictionary(l => l, l => l.intensity);
+
+        foreach (var l in lights)
+        {
+            var flicker = l.GetComponent<LightFlicker>();
+            if (flicker)
+                flicker.enabled = false;
+        }
 
         var t = 0f;
         while (t < 1)
