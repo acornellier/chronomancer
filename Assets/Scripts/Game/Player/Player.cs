@@ -1,9 +1,9 @@
 using System;
 using System.Collections;
 using Animancer;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using Zenject;
 
 [RequireComponent(typeof(Collider2D))]
@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     bool _isFalling;
     bool _isAttacking;
     bool _isDying;
+    bool _isEndingLevel;
 
     readonly RaycastHit2D[] _hitBuffer = new RaycastHit2D[8];
     const float GroundEpsilon = 0.05f;
@@ -64,16 +65,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (_isEndingLevel) return;
+
         if (Keyboard.current.aKey.IsPressed())
             _movementInput = -1;
         else if (Keyboard.current.dKey.IsPressed())
             _movementInput = 1;
-    }
-
-    void OnFireInput(Wand.ShootType shootType)
-    {
-        _shootInput = true;
-        _shootType = shootType;
     }
 
     void FixedUpdate()
@@ -84,6 +81,12 @@ public class Player : MonoBehaviour
         UpdateDirection();
         UpdateShooting();
         UpdateAnimations();
+    }
+
+    void OnFireInput(Wand.ShootType shootType)
+    {
+        _shootInput = true;
+        _shootType = shootType;
     }
 
     void UpdateVelocity()
@@ -140,7 +143,7 @@ public class Player : MonoBehaviour
 
     void UpdateAnimations()
     {
-        if (_isAttacking || _isDying)
+        if (_isAttacking || _isDying || _isEndingLevel)
             return;
 
         if (_isFalling)
@@ -183,6 +186,22 @@ public class Player : MonoBehaviour
         StartCoroutine(CO_Die());
     }
 
+    public void OnLevelEnd(SceneAsset scene)
+    {
+        StartCoroutine(CO_LevelEnd(scene));
+    }
+
+    IEnumerator CO_LevelEnd(UnityEngine.Object scene)
+    {
+        _playerControls.Disable();
+        _isEndingLevel = true;
+        yield return new WaitForSeconds(0.1f);
+        _levelLoader.LoadScene(scene.name);
+        var state = _animancer.Play(animations.portalOut);
+        state.Speed = 1;
+        yield return state;
+    }
+
     IEnumerator CO_Die()
     {
         _isDying = true;
@@ -214,5 +233,6 @@ public class Player : MonoBehaviour
         public AnimationClip fall;
         public AnimationClip die;
         public AnimationClip attack;
+        public AnimationClip portalOut;
     }
 }
