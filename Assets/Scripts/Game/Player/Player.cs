@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     bool _isDyingOrEndingLevel;
 
     readonly RaycastHit2D[] _hitBuffer = new RaycastHit2D[8];
-    const float GroundEpsilon = 0.05f;
+    const float groundEpsilon = 0.05f;
 
     void Awake()
     {
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
 
     bool IsGrounded()
     {
-        var numHits = _collider.Cast(Vector2.down, _groundMask, _hitBuffer, GroundEpsilon);
+        var numHits = _collider.Cast(Vector2.down, _groundMask, _hitBuffer, groundEpsilon);
         for (var hitIndex = 0; hitIndex < numHits; hitIndex++)
         {
             var hit = _hitBuffer[hitIndex];

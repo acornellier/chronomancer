@@ -136,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7504695470965149860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.063, y: -0.2233, z: -0.014056237}
+  m_LocalPosition: {x: 0.063, y: -0.2233, z: -0.01405624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -341,7 +341,7 @@ MonoBehaviour:
     idle: {fileID: 7400000, guid: 1164a18ef428e4415befbc86f0f2b04b, type: 2}
     walk: {fileID: 7400000, guid: 8f3badfa9c1724ee6b5cb45c1d5a2c47, type: 2}
     jump: {fileID: 7400000, guid: b8f173440b4a94bd0a8f6d6ae093ab33, type: 2}
-    duck: {fileID: 7400000, guid: 314c8e9a11fffdd4983b47aa60560b16, type: 2}
+    duck: {fileID: 7400000, guid: 9d1bcc1b6f819e146b9853457f94d8bf, type: 2}
     fall: {fileID: 7400000, guid: c68432a3987ae4bdbbe0f88a2025aef1, type: 2}
     die: {fileID: 7400000, guid: b9c992b1006534cf39f0b2ef60470763, type: 2}
     shoot: {fileID: 7400000, guid: 04dde65d1abe046b5ac7f91323909802, type: 2}

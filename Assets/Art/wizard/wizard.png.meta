@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9371276d89f484c6a9e28b16775697dc
+guid: 838ae31ef13791e43b38a7f59ae68c6b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -1062,8 +1062,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 5f9a64bb484ad9420800000000000000
+      internalID: 2638445846693587445
       vertices: []
       indices: 
       edges: []
@@ -1083,8 +1083,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 1a79f48590628bac0800000000000000
+      internalID: -3839276860755175519
       vertices: []
       indices: 
       edges: []
@@ -1104,8 +1104,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: a61db70edb66546c0800000000000000
+      internalID: -4159805715105722006
       vertices: []
       indices: 
       edges: []
@@ -1125,8 +1125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: ed3d4d8bd0ecb76d0800000000000000
+      internalID: -2991570969126710306
       vertices: []
       indices: 
       edges: []
@@ -1146,8 +1146,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 9a966be6b2f5d84f0800000000000000
+      internalID: -824898516593251927
       vertices: []
       indices: 
       edges: []
@@ -1167,8 +1167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: a65ced1711a224720800000000000000
+      internalID: 2828869770355328362
       vertices: []
       indices: 
       edges: []
@@ -1188,8 +1188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 6b49e35544ee11cd0800000000000000
+      internalID: -2589026333505973066
       vertices: []
       indices: 
       edges: []
@@ -1199,6 +1199,27 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 171
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7ec4b43d23f5cb0800000000000000
+      internalID: -4873120388708767811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard54
+      rect:
+        serializedVersion: 2
+        x: 205
         y: 35
         width: 32
         height: 32
@@ -1232,7 +1253,7 @@ TextureImporter:
       wizard34: -8666632262614858344
       wizard31: 6023021923322582456
       wizard21: -2531621595878397548
-      wizard50: 0
+      wizard50: -824898516593251927
       wizard54: 0
       wizard19: 5285676837170944160
       wizard01: -1895373885881115354
@@ -1241,19 +1262,19 @@ TextureImporter:
       wizard45: 2959382695615565582
       wizard06: -2584302289719206510
       wizard42: 3647665034425030696
-      wizard52: 0
-      wizard49: 0
+      wizard52: -2589026333505973066
+      wizard49: -2991570969126710306
       wizard03: -1019008093502661850
-      wizard51: 0
+      wizard51: 2828869770355328362
       wizard08: -5348822750586039410
-      wizard47: 0
+      wizard47: -3839276860755175519
       wizard26: 5345170146065166989
       wizard36: 6074361603178839798
-      wizard46: 0
-      wizard28: 3801131526795476194
+      wizard46: 2638445846693587445
+      wizard15: 950148193357758411
       wizard20: 7432930609943953682
       wizard32: 5576969828637556474
-      wizard15: 950148193357758411
+      wizard28: 3801131526795476194
       wizard04: -903040263352724253
       wizard35: -5426887338980602656
       wizard22: -7434731312813565388
@@ -1269,16 +1290,17 @@ TextureImporter:
       wizard13: -4976732201152753333
       wizard41: -5823948433352653994
       wizard14: -6505033983162869507
-      wizard53: 0
+      wizard53: -4873120388708767811
       wizard02: 2935833628201237411
       wizard07: -1357540365884204036
       wizard12: -5432852343291027201
       wizard16: 5512230802024372620
       wizard17: -2738760786491626355
       wizard27: -7472529825916840390
-      wizard48: 0
+      wizard48: -4159805715105722006
       wizard25: -2108730071775309448
       wizard37: 7120893760588713616
+      wizard55: 0
       wizard10: -6596182169863110378
       wizard43: -8882291095838428110
   spritePackingTag: 
