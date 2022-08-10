@@ -25,13 +25,12 @@ public class ArrowTrap : MonoBehaviour
         {
             Shoot();
             _cooldownRemaining = cooldown;
-            // _cooldownRemaining = cooldown / SpeedTracker.Multiplier;
         }
     }
 
     void Shoot()
     {
-        var arrow = Instantiate(arrowPrefab, spawnPoint.position, Quaternion.identity, transform);
+        var arrow = Instantiate(arrowPrefab, spawnPoint.position, transform.rotation);
         arrow.Direction = direction;
         arrow.SpeedTracker.Multiplier = speedTracker.Multiplier;
     }

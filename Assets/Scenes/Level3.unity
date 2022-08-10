@@ -376,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow Trap (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618776183202075212, guid: 727ecea3beb2b7c48b2e497f56d53598, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 727ecea3beb2b7c48b2e497f56d53598, type: 3}
@@ -1142,6 +1146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow Trap (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7618776183202075212, guid: 727ecea3beb2b7c48b2e497f56d53598, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 727ecea3beb2b7c48b2e497f56d53598, type: 3}
@@ -1462,6 +1470,10 @@ PrefabInstance:
     - target: {fileID: 7618776183202075212, guid: 727ecea3beb2b7c48b2e497f56d53598, type: 3}
       propertyPath: m_Name
       value: Arrow Trap (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618776183202075212, guid: 727ecea3beb2b7c48b2e497f56d53598, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -41667,7 +41679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1835119581574154298, guid: eaac2aa831354bd4a844b6a2fa972831, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.45
+      value: 11.96
       objectReference: {fileID: 0}
     - target: {fileID: 1835119581574154298, guid: eaac2aa831354bd4a844b6a2fa972831, type: 3}
       propertyPath: m_LocalPosition.y
@@ -41946,6 +41958,10 @@ PrefabInstance:
       propertyPath: animations.fall
       value: 
       objectReference: {fileID: 7400000, guid: 0a93491a8b09f6f46880c18423464353, type: 2}
+    - target: {fileID: 7967880215193007596, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
+      propertyPath: stats.downwardVelocityDeath
+      value: -15
+      objectReference: {fileID: 0}
     - target: {fileID: 7967880215193007599, guid: e11f9370c19d95e45a232b8d8291bf96, type: 3}
       propertyPath: m_Name
       value: Player

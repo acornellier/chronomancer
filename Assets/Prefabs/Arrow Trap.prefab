@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   renderer: {fileID: 7618776183202075211}
+  otherRenderers: []
 --- !u!114 &7618776183202075208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +151,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 5633282725169466139, guid: 524258c3fef6fbb4198cc2fffadc7bc8, type: 3}
   direction: {x: 1, y: 0}
   cooldown: 1
+  initialCooldown: 0
 --- !u!1 &8391499995423923267
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8391499995423923267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.806, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -4,6 +4,7 @@ using Animancer;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Zenject;
 
 [RequireComponent(typeof(Collider2D))]
@@ -32,8 +33,9 @@ public class Player : MonoBehaviour
     bool _isJumping;
     float _jumpingTimestamp;
     bool _isFalling;
+    bool _willDieWhenGrounded;
+
     bool _isDucking;
-    bool _isAttacking;
     bool _isDying;
     bool _isEndingLevel;
 
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
     {
         _playerControls.Player.Enable();
         _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
+        _playerControls.Player.Duck.started += OnDuckInput;
         _playerControls.Player.Duck.performed += OnDuckInput;
         _playerControls.Player.Duck.canceled += OnDuckInput;
         _playerControls.Player.Fire1.performed += (_) => OnFireInput(Wand.ShootType.Type1);
@@ -127,16 +130,23 @@ public class Player : MonoBehaviour
     {
         _body.gravityScale = stats.gravityForce;
 
-        if (_isJumping && _body.velocity.y < 0)
+        if ((_isJumping && _body.velocity.y < 0) || _body.velocity.y < -5f)
         {
             _isFalling = true;
             _body.gravityScale *= stats.fallingGravityMultiplier;
         }
 
-        if (_isJumping && _isGrounded && (_isFalling || Time.time - _jumpingTimestamp > 0.1f))
+        if (_isFalling && _body.velocity.y < stats.downwardVelocityDeath)
+            _willDieWhenGrounded = true;
+
+        if (_isGrounded && (_isFalling || Time.time - _jumpingTimestamp > 0.1f))
         {
+            if (_willDieWhenGrounded)
+                Die();
+
             _isJumping = false;
             _isFalling = false;
+            _willDieWhenGrounded = false;
         }
 
         if (_isGrounded && Time.time - _jumpInputTimestamp < stats.jumpInputBuffer)
@@ -151,12 +161,20 @@ public class Player : MonoBehaviour
 
     void UpdateAnimations()
     {
-        if (_isAttacking || _isDying || _isEndingLevel)
+        if (_isDying || _isEndingLevel)
             return;
 
         if (_isDucking)
+        {
             _animancer.Play(animations.duck);
-        else if (_isFalling)
+            return;
+        }
+
+        var isShooting = _animancer.IsPlaying(animations.shoot);
+        if (isShooting)
+            return;
+
+        if (_isFalling)
             _animancer.Play(animations.fall);
         else if (_isJumping)
             _animancer.Play(animations.jump);
@@ -175,20 +193,14 @@ public class Player : MonoBehaviour
 
     void UpdateShooting()
     {
-        if (!_shootInput)
+        if (!_shootInput || _isDucking)
             return;
 
-        wand.Shoot(_shootType);
-        _isAttacking = true;
         _shootInput = false;
-
+        wand.Shoot(_shootType);
         _animancer.Stop();
-        var state = _animancer.Play(animations.attack);
-        state.Events.OnEnd += () =>
-        {
-            _isAttacking = false;
-            _animancer.Play(animations.idle);
-        };
+        var state = _animancer.Play(animations.shoot);
+        state.Events.OnEnd += () => _animancer.Play(animations.idle);
     }
 
     public void Die()
@@ -229,6 +241,7 @@ public class Player : MonoBehaviour
         public float fallingGravityMultiplier = 1.2f;
         public float jumpInputBuffer = 0.1f;
         public float duckingSlow = 0.2f;
+        public float downwardVelocityDeath = -10f;
     }
 
     [Serializable]
@@ -240,7 +253,7 @@ public class Player : MonoBehaviour
         public AnimationClip duck;
         public AnimationClip fall;
         public AnimationClip die;
-        public AnimationClip attack;
+        public AnimationClip shoot;
         public AnimationClip portalOut;
     }
 }

@@ -1,17 +1,15 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpeedTracker))]
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] float baseSpeed = 1f;
+    [SerializeField] float baseSpeed = 15f;
 
     Vector2 _direction;
 
     public Vector2 Direction
     {
-        get => _direction;
         set
         {
             _direction = value;
@@ -43,8 +41,7 @@ public class Arrow : MonoBehaviour
 
     void UpdatePhysics()
     {
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, Direction);
-        _body.velocity = baseSpeed * SpeedTracker.Multiplier * Direction;
+        _body.velocity = baseSpeed * SpeedTracker.Multiplier * transform.up;
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -53,7 +50,7 @@ public class Arrow : MonoBehaviour
         if (player)
             player.Die();
 
-        if (_contactMask.Contains(col.gameObject.layer))
+        if (player || _contactMask.Contains(col.gameObject.layer))
             Destroy(gameObject);
     }
 }
