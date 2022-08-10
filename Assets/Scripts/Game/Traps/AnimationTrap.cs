@@ -1,18 +1,19 @@
 ﻿using Animancer;
+using UnityEngine;
 
-public class AnimationTrap : Trap
+public class AnimationTrap : MonoBehaviour
 {
     SoloAnimation _animation;
+    SpeedTracker _speedTracker;
 
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
         _animation = GetComponent<SoloAnimation>();
+        _speedTracker = GetComponent<SpeedTracker>();
     }
 
-    protected override void Update()
+    void Update()
     {
-        base.Update();
-        _animation.Speed = SpeedTracker.Multiplier;
+        _animation.Speed = _speedTracker.Multiplier;
     }
 }

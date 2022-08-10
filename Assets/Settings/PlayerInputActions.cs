@@ -71,6 +71,15 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Duck"",
+                    ""type"": ""Button"",
+                    ""id"": ""5c882f43-5a57-4908-86ac-ee27ce3e3ebf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -148,6 +157,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""18c09deb-e386-4d17-85a4-fd5de4c9c9eb"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Duck"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -740,6 +760,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_RestartLevel = m_Player.FindAction("RestartLevel", throwIfNotFound: true);
+        m_Player_Duck = m_Player.FindAction("Duck", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -816,6 +837,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_RestartLevel;
+    private readonly InputAction m_Player_Duck;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -825,6 +847,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @RestartLevel => m_Wrapper.m_Player_RestartLevel;
+        public InputAction @Duck => m_Wrapper.m_Player_Duck;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -849,6 +872,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @RestartLevel.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
                 @RestartLevel.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
                 @RestartLevel.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
+                @Duck.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDuck;
+                @Duck.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDuck;
+                @Duck.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDuck;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -868,6 +894,9 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @RestartLevel.started += instance.OnRestartLevel;
                 @RestartLevel.performed += instance.OnRestartLevel;
                 @RestartLevel.canceled += instance.OnRestartLevel;
+                @Duck.started += instance.OnDuck;
+                @Duck.performed += instance.OnDuck;
+                @Duck.canceled += instance.OnDuck;
             }
         }
     }
@@ -1029,6 +1058,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRestartLevel(InputAction.CallbackContext context);
+        void OnDuck(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

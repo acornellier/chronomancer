@@ -227,6 +227,7 @@ MonoBehaviour:
     idle: {fileID: 7400000, guid: 1164a18ef428e4415befbc86f0f2b04b, type: 2}
     walk: {fileID: 7400000, guid: 8f3badfa9c1724ee6b5cb45c1d5a2c47, type: 2}
     jump: {fileID: 7400000, guid: b8f173440b4a94bd0a8f6d6ae093ab33, type: 2}
+    duck: {fileID: 7400000, guid: 314c8e9a11fffdd4983b47aa60560b16, type: 2}
     fall: {fileID: 7400000, guid: c68432a3987ae4bdbbe0f88a2025aef1, type: 2}
     die: {fileID: 7400000, guid: b9c992b1006534cf39f0b2ef60470763, type: 2}
     attack: {fileID: 7400000, guid: 04dde65d1abe046b5ac7f91323909802, type: 2}
@@ -244,8 +245,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.03071785, y: -0.103968024}
+  m_Size: {x: 0.66446733, y: 1.792064}
   m_Direction: 0
 --- !u!50 &7967880215193007598
 Rigidbody2D:

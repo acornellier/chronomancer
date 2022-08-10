@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     bool _isJumping;
     float _jumpingTimestamp;
     bool _isFalling;
+    bool _isDucking;
     bool _isAttacking;
     bool _isDying;
     bool _isEndingLevel;
@@ -50,11 +51,11 @@ public class Player : MonoBehaviour
 
     void OnEnable()
     {
-        _playerControls.Player.Jump.Enable();
+        _playerControls.Player.Enable();
         _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
-        _playerControls.Player.Fire1.Enable();
+        _playerControls.Player.Duck.performed += OnDuckInput;
+        _playerControls.Player.Duck.canceled += OnDuckInput;
         _playerControls.Player.Fire1.performed += (_) => OnFireInput(Wand.ShootType.Type1);
-        _playerControls.Player.Fire2.Enable();
         _playerControls.Player.Fire2.performed += (_) => OnFireInput(Wand.ShootType.Type2);
     }
 
@@ -89,10 +90,17 @@ public class Player : MonoBehaviour
         _shootType = shootType;
     }
 
+    void OnDuckInput(InputAction.CallbackContext ctx)
+    {
+        _isDucking = ctx.ReadValueAsButton();
+    }
+
     void UpdateVelocity()
     {
         var velocity = _body.velocity;
         velocity.x = _movementInput * stats.walkSpeed;
+        if (_isDucking)
+            velocity.x *= stats.duckingSlow;
         _movementInput = 0;
         _body.velocity = velocity;
     }
@@ -146,7 +154,9 @@ public class Player : MonoBehaviour
         if (_isAttacking || _isDying || _isEndingLevel)
             return;
 
-        if (_isFalling)
+        if (_isDucking)
+            _animancer.Play(animations.duck);
+        else if (_isFalling)
             _animancer.Play(animations.fall);
         else if (_isJumping)
             _animancer.Play(animations.jump);
@@ -205,8 +215,6 @@ public class Player : MonoBehaviour
     IEnumerator CO_Die()
     {
         _isDying = true;
-        _body.isKinematic = true;
-        _body.constraints = RigidbodyConstraints2D.FreezeAll;
         var state = _animancer.Play(animations.die);
         yield return state;
         _levelLoader.ReloadScene();
@@ -219,9 +227,8 @@ public class Player : MonoBehaviour
         public float jumpForce = 8;
         public float gravityForce = 1;
         public float fallingGravityMultiplier = 1.2f;
-
         public float jumpInputBuffer = 0.1f;
-        // public float variableJumpMaxTime = 1f;
+        public float duckingSlow = 0.2f;
     }
 
     [Serializable]
@@ -230,6 +237,7 @@ public class Player : MonoBehaviour
         public AnimationClip idle;
         public AnimationClip walk;
         public AnimationClip jump;
+        public AnimationClip duck;
         public AnimationClip fall;
         public AnimationClip die;
         public AnimationClip attack;

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class FallingTrap : Trap
+public class FallingTrap : MonoBehaviour
 {
+    [SerializeField] SpeedTracker speedTracker;
     [SerializeField] Trigger trigger;
     [SerializeField] float acceleration = 10f;
 
@@ -12,16 +13,15 @@ public class FallingTrap : Trap
 
     bool _triggered;
 
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
         _body = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
         if (trigger.Triggered)
-            _body.velocity += acceleration * SpeedTracker.Multiplier * Time.fixedDeltaTime *
+            _body.velocity += acceleration * speedTracker.Multiplier * Time.fixedDeltaTime *
                               Vector2.down;
     }
 

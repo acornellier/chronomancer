@@ -1,40 +1,50 @@
-﻿using UnityEngine;
-using UnityEngine.Serialization;
+﻿using System;
+using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(SpeedTracker))]
 public class Arrow : MonoBehaviour
 {
     [SerializeField] float baseSpeed = 1f;
 
-    public Vector3 Direction { get; set; }
+    Vector2 _direction;
+
+    public Vector2 Direction
+    {
+        get => _direction;
+        set
+        {
+            _direction = value;
+            UpdatePhysics();
+        }
+    }
+
     public SpeedTracker SpeedTracker { get; private set; }
 
+    Rigidbody2D _body;
     LayerMask _contactMask;
-    SpriteRenderer _renderer;
 
     void Awake()
     {
+        _body = GetComponent<Rigidbody2D>();
         _contactMask = LayerMask.GetMask("Ground");
-        _renderer = GetComponent<SpriteRenderer>();
         SpeedTracker = GetComponent<SpeedTracker>();
     }
 
-    void Update()
+    void OnEnable()
     {
-        _renderer.color = SpeedTracker.Multiplier switch
-        {
-            < 1 => Color.blue,
-            > 1 => Color.red,
-            _ => Color.green,
-        };
+        SpeedTracker.OnChange += UpdatePhysics;
     }
 
-    void FixedUpdate()
+    void OnDisable()
     {
-        transform.Translate(baseSpeed * SpeedTracker.Multiplier * Time.fixedDeltaTime * Direction);
+        SpeedTracker.OnChange -= UpdatePhysics;
+    }
+
+    void UpdatePhysics()
+    {
+        transform.rotation = Quaternion.LookRotation(Vector3.forward, Direction);
+        _body.velocity = baseSpeed * SpeedTracker.Multiplier * Direction;
     }
 
     void OnTriggerEnter2D(Collider2D col)
