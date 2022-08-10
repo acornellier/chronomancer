@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
@@ -17,9 +18,7 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
-        // #if !UNITY_EDITOR
         StartCoroutine(StartLevel());
-        // #endif
     }
 
     void OnEnable()
@@ -38,7 +37,18 @@ public class LevelLoader : MonoBehaviour
         LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void LoadScene(string scene)
+    // All levels must follow the format LevelXX
+    // TODO: improve this terrible solution
+    public void LoadNextScene()
+    {
+        var currentScene = SceneManager.GetActiveScene().name;
+        var regex = new Regex(@"Level(\d+)");
+        var match = regex.Match(currentScene);
+        var currentLevel = int.Parse(match.Groups[1].Value);
+        LoadScene("Level" + (currentLevel + 1));
+    }
+
+    void LoadScene(string scene)
     {
         StartCoroutine(FadeToScene(scene));
     }

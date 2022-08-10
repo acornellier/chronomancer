@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Wand : MonoBehaviour
 {
-    [SerializeField] public Transform wandTip;
+    [SerializeField] Transform shootPoint;
     [SerializeField] Bolt bolt1Prefab;
     [SerializeField] Bolt bolt2Prefab;
 
@@ -11,8 +11,8 @@ public class Wand : MonoBehaviour
     {
         var boltPrefab = shootType == ShootType.Type1 ? bolt1Prefab : bolt2Prefab;
         var point = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        var direction = ((Vector2)(point - wandTip.position)).normalized;
-        var bolt = Instantiate(boltPrefab, wandTip.position, Quaternion.identity);
+        var direction = ((Vector2)(point - shootPoint.position)).normalized;
+        var bolt = Instantiate(boltPrefab, shootPoint.position, Quaternion.identity);
         bolt.SetDirection(direction);
     }
 

@@ -4,7 +4,6 @@ using Animancer;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using Zenject;
 
 [RequireComponent(typeof(Collider2D))]
@@ -36,8 +35,7 @@ public class Player : MonoBehaviour
     bool _willDieWhenGrounded;
 
     bool _isDucking;
-    bool _isDying;
-    bool _isEndingLevel;
+    bool _isDyingOrEndingLevel;
 
     readonly RaycastHit2D[] _hitBuffer = new RaycastHit2D[8];
     const float GroundEpsilon = 0.05f;
@@ -69,7 +67,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (_isEndingLevel) return;
+        _movementInput = 0;
+        if (_isDyingOrEndingLevel)
+            return;
 
         if (Keyboard.current.aKey.IsPressed())
             _movementInput = -1;
@@ -161,7 +161,7 @@ public class Player : MonoBehaviour
 
     void UpdateAnimations()
     {
-        if (_isDying || _isEndingLevel)
+        if (_isDyingOrEndingLevel)
             return;
 
         if (_isDucking)
@@ -208,17 +208,17 @@ public class Player : MonoBehaviour
         StartCoroutine(CO_Die());
     }
 
-    public void OnLevelEnd(SceneAsset scene)
+    public void OnLevelEnd()
     {
-        StartCoroutine(CO_LevelEnd(scene));
+        StartCoroutine(CO_LevelEnd());
     }
 
-    IEnumerator CO_LevelEnd(UnityEngine.Object scene)
+    IEnumerator CO_LevelEnd()
     {
         _playerControls.Disable();
-        _isEndingLevel = true;
+        _isDyingOrEndingLevel = true;
         yield return new WaitForSeconds(0.1f);
-        _levelLoader.LoadScene(scene.name);
+        _levelLoader.LoadNextScene();
         var state = _animancer.Play(animations.portalOut);
         state.Speed = 1;
         yield return state;
@@ -226,7 +226,8 @@ public class Player : MonoBehaviour
 
     IEnumerator CO_Die()
     {
-        _isDying = true;
+        _playerControls.Disable();
+        _isDyingOrEndingLevel = true;
         var state = _animancer.Play(animations.die);
         yield return state;
         _levelLoader.ReloadScene();
