@@ -56,7 +56,8 @@ public class LevelLoader : MonoBehaviour
     IEnumerator StartLevel()
     {
         var lights = FindObjectsOfType<Light2D>();
-        var startingIntensities = lights.ToDictionary(l => l, l => l.intensity);
+        var startingIntensities =
+            lights.ToDictionary(l => l, l => l.intensity);
 
         foreach (var l in lights)
         {
@@ -79,7 +80,8 @@ public class LevelLoader : MonoBehaviour
     IEnumerator FadeToScene(string scene)
     {
         var lights = FindObjectsOfType<Light2D>();
-        var startingIntensities = lights.ToDictionary(l => l, l => l.intensity);
+        var startingIntensities =
+            lights.ToDictionary(l => l, l => l.intensity);
 
         foreach (var l in lights)
         {

@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Wand : MonoBehaviour
+public class PlayerSpells : MonoBehaviour
 {
     [SerializeField] Transform shootPoint;
     [SerializeField] Bolt bolt1Prefab;
     [SerializeField] Bolt bolt2Prefab;
+
+    [SerializeField] AudioSource shootAudioSource;
+    [SerializeField] AudioClip shootClip;
 
     public void Shoot(ShootType shootType)
     {
@@ -14,6 +17,9 @@ public class Wand : MonoBehaviour
         var direction = ((Vector2)(point - shootPoint.position)).normalized;
         var bolt = Instantiate(boltPrefab, shootPoint.position, Quaternion.identity);
         bolt.SetDirection(direction);
+
+        shootAudioSource.Play();
+        shootAudioSource.PlayOneShot(shootClip);
     }
 
     public enum ShootType

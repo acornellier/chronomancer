@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using Animancer;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -11,7 +10,7 @@ using Zenject;
 [RequireComponent(typeof(AnimancerComponent))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] Wand wand;
+    [SerializeField] PlayerSpells playerSpells;
     [SerializeField] Stats stats;
     [SerializeField] Animations animations;
 
@@ -26,7 +25,7 @@ public class Player : MonoBehaviour
     float _movementInput;
     float _jumpInputTimestamp = float.NegativeInfinity;
     bool _shootInput;
-    Wand.ShootType _shootType;
+    PlayerSpells.ShootType _shootType;
 
     bool _isGrounded;
     bool _isJumping;
@@ -56,8 +55,8 @@ public class Player : MonoBehaviour
         _playerControls.Player.Duck.started += OnDuckInput;
         _playerControls.Player.Duck.performed += OnDuckInput;
         _playerControls.Player.Duck.canceled += OnDuckInput;
-        _playerControls.Player.Fire1.performed += (_) => OnFireInput(Wand.ShootType.Type1);
-        _playerControls.Player.Fire2.performed += (_) => OnFireInput(Wand.ShootType.Type2);
+        _playerControls.Player.Fire1.performed += (_) => OnFireInput(PlayerSpells.ShootType.Type1);
+        _playerControls.Player.Fire2.performed += (_) => OnFireInput(PlayerSpells.ShootType.Type2);
     }
 
     void OnDisable()
@@ -87,7 +86,7 @@ public class Player : MonoBehaviour
         UpdateAnimations();
     }
 
-    void OnFireInput(Wand.ShootType shootType)
+    void OnFireInput(PlayerSpells.ShootType shootType)
     {
         _shootInput = true;
         _shootType = shootType;
@@ -197,7 +196,7 @@ public class Player : MonoBehaviour
             return;
 
         _shootInput = false;
-        wand.Shoot(_shootType);
+        playerSpells.Shoot(_shootType);
         _animancer.Stop();
         var state = _animancer.Play(animations.shoot);
         state.Events.OnEnd += () => _animancer.Play(animations.idle);

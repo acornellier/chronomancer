@@ -1,4 +1,4 @@
-﻿#if !NOT_UNITY3D
+#if !NOT_UNITY3D
 
 using System;
 using System.Collections.Generic;

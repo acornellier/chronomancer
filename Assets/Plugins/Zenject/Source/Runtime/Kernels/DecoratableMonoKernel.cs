@@ -1,4 +1,4 @@
-﻿namespace Zenject
+namespace Zenject
 {
     public interface IDecoratableMonoKernel
     {
