@@ -11,6 +11,7 @@ using Zenject;
 public class Player : MonoBehaviour
 {
     [SerializeField] PlayerSpells playerSpells;
+    [SerializeField] PlayerAudio playerAudio;
     [SerializeField] Stats stats;
     [SerializeField] Animations animations;
 
@@ -37,7 +38,6 @@ public class Player : MonoBehaviour
     bool _isDyingOrEndingLevel;
 
     readonly RaycastHit2D[] _hitBuffer = new RaycastHit2D[8];
-    const float groundEpsilon = 0.05f;
 
     void Awake()
     {
@@ -97,12 +97,23 @@ public class Player : MonoBehaviour
         _isDucking = ctx.ReadValueAsButton();
     }
 
+    void OnFootstep()
+    {
+        playerAudio.Footstep();
+    }
+
     void UpdateVelocity()
     {
         var velocity = _body.velocity;
         velocity.x = _movementInput * stats.walkSpeed;
+
         if (_isDucking)
             velocity.x *= stats.duckingSlow;
+
+        // cancel out downward upward movement when walking on slopes 
+        if (_isGrounded && !_isJumping && !_isFalling && velocity.y > 0)
+            velocity.y = 0;
+
         _movementInput = 0;
         _body.velocity = velocity;
     }
@@ -114,11 +125,11 @@ public class Player : MonoBehaviour
 
     bool IsGrounded()
     {
-        var numHits = _collider.Cast(Vector2.down, _groundMask, _hitBuffer, groundEpsilon);
+        var numHits = _collider.Cast(Vector2.down, _groundMask, _hitBuffer, stats.groundedEpsilon);
         for (var hitIndex = 0; hitIndex < numHits; hitIndex++)
         {
             var hit = _hitBuffer[hitIndex];
-            if (hit.normal == Vector2.up)
+            if (Vector2.Angle(hit.normal, Vector2.up) < 60)
                 return true;
         }
 
@@ -138,14 +149,15 @@ public class Player : MonoBehaviour
         if (_isFalling && _body.velocity.y < stats.downwardVelocityDeath)
             _willDieWhenGrounded = true;
 
-        if (_isGrounded && (_isFalling || Time.time - _jumpingTimestamp > 0.1f))
+        if (_isGrounded && (_isFalling || (_isJumping && Time.time - _jumpingTimestamp > 0.1f)))
         {
             if (_willDieWhenGrounded)
                 Die();
 
-            _isJumping = false;
             _isFalling = false;
             _willDieWhenGrounded = false;
+            _isJumping = false;
+            playerAudio.Land();
         }
 
         if (_isGrounded && Time.time - _jumpInputTimestamp < stats.jumpInputBuffer)
@@ -155,6 +167,7 @@ public class Player : MonoBehaviour
             _jumpInputTimestamp = 0;
             _body.velocity = new Vector2(_body.velocity.x, 0);
             _body.AddForce(new Vector2(0, stats.jumpForce), ForceMode2D.Impulse);
+            playerAudio.Jump();
         }
     }
 
@@ -242,6 +255,7 @@ public class Player : MonoBehaviour
         public float jumpInputBuffer = 0.1f;
         public float duckingSlow = 0.2f;
         public float downwardVelocityDeath = -10f;
+        public float groundedEpsilon = 0.05f;
     }
 
     [Serializable]

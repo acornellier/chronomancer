@@ -6,18 +6,63 @@
   <component name="ChangeListManager">
     <list default="true" id="5f228a16-d995-4c11-8e1d-e42d2dd96aad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Decorations/Background.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Decorations/Background.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Essentials.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Essentials.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Castle/CastleMain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Castle/CastleMain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Castle/main_lev_build.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Castle/main_lev_build.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_breathe.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_breathe.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_breathe.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_breathe.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_die.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_dieold.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_dieold.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_duck.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_duck.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_duck.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_duck.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_fall.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_fall.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_fall.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_fall.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_idle.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_jump.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_portalOut.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_portalOut.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_portalOut.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_portalOut.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_shoot.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_walk.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard.ase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard.ase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_breathe.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_breathe.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_die.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_die.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_duck.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_duck.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_fall.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_fall.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_portalOut.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_portalOut.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_shoot.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_shoot.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/wizard/wizard_walk.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/VolumeSlider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/VolumeSlider.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/LightFlicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/LightFlicker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/MenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Installers/ProjectInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +78,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b1c576a7c04d02b267d8bd8ce3cc5d15d200/4d/74ac1c03/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b1c576a7c04d02b267d8bd8ce3cc5d15d200/78/8edeab8f/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b1c576a7c04d02b267d8bd8ce3cc5d15d200/d1/0a74e313/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46b1c576a7c04d02b267d8bd8ce3cc5d15d200/dd/7c9444f8/CursorMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8309b0f72101475bb41aa0f0fb4be45710000/e3/cbf0966a/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/io.tinu.asepriteimporter@dce15fde71/Editor/Importers/AnimationImporter.cs" root0="SKIP_HIGHLIGHTING" />
@@ -110,7 +156,7 @@
       <updated>1659727441188</updated>
       <workItem from="1659727453304" duration="17196000" />
       <workItem from="1660170169806" duration="3708000" />
-      <workItem from="1660177858555" duration="8711000" />
+      <workItem from="1660177858555" duration="13052000" />
     </task>
     <servers />
   </component>

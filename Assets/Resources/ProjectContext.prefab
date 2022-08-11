@@ -76,3 +76,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   essentials: {fileID: 2460169037770127518, guid: c2dace92427f8f149a75d49f5389c993, type: 3}
+  mouseCursor: {fileID: 2800000, guid: f5dc26f415fd79c4ebd221f52c1684be, type: 3}
+  hotSpot: {x: 0, y: 0}

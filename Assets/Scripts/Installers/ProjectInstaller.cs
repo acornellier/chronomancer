@@ -5,6 +5,9 @@ public class ProjectInstaller : MonoInstaller
 {
     [SerializeField] GameObject essentials;
 
+    [SerializeField] Texture2D mouseCursor;
+    [SerializeField] Vector2 hotSpot;
+
     public override void InstallBindings()
     {
         Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
@@ -13,5 +16,7 @@ public class ProjectInstaller : MonoInstaller
         Container.Bind<LevelLoader>().FromComponentInHierarchy().AsSingle();
 
         Container.InstantiatePrefab(essentials);
+
+        Cursor.SetCursor(mouseCursor, hotSpot, CursorMode.Auto);
     }
 }
