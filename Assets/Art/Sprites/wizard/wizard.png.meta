@@ -1236,6 +1236,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: wizard55
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 35
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard57
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard58
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1255,6 +1339,7 @@ TextureImporter:
       wizard21: -2531621595878397548
       wizard50: -824898516593251927
       wizard54: 0
+      wizard57: 0
       wizard19: 5285676837170944160
       wizard01: -1895373885881115354
       wizard40: 6702611725443649791
@@ -1271,6 +1356,7 @@ TextureImporter:
       wizard26: 5345170146065166989
       wizard36: 6074361603178839798
       wizard46: 2638445846693587445
+      wizard58: 0
       wizard28: 3801131526795476194
       wizard20: 7432930609943953682
       wizard32: 5576969828637556474
@@ -1281,6 +1367,7 @@ TextureImporter:
       wizard29: 4883021577942090936
       wizard05: 758525325075585803
       wizard23: 6379634886535940597
+      wizard56: 0
       wizard24: 2417784149497559429
       wizard00: -2921556822632914227
       wizard39: 6788144436583445142

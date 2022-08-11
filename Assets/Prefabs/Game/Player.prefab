@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 7967880215193007598}
   - component: {fileID: 7967880215193007584}
   - component: {fileID: 7967880215193007585}
-  - component: {fileID: 1050701194}
+  - component: {fileID: 1011500189905882650}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -776,7 +776,7 @@ SpriteRenderer:
   m_SortingLayerID: 2079999809
   m_SortingLayer: -4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2921556822632914227, guid: 9371276d89f484c6a9e28b16775697dc, type: 3}
+  m_Sprite: {fileID: -2921556822632914227, guid: 838ae31ef13791e43b38a7f59ae68c6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -784,7 +784,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &7967880215193007596
@@ -812,17 +812,10 @@ MonoBehaviour:
     groundedEpsilon: 0.05
   animations:
     idle: {fileID: 7400000, guid: 3d3bbb7508d720c489e97176f6ce2fac, type: 2}
-    walk:
-      _FadeDuration: 0.25
-      _Events:
-        _NormalizedTimes: []
-        _Callbacks: []
-        _Names: []
-      _Clip: {fileID: 7400000, guid: 15caae25a0983c447b3957b1696ec2e2, type: 2}
-      _Speed: 1
-      _NormalizedStartTime: NaN
+    walk: {fileID: 7400000, guid: 15caae25a0983c447b3957b1696ec2e2, type: 2}
     jump: {fileID: 7400000, guid: 2a8db2330107ead4aa2dfdeba0e8d401, type: 2}
     duck: {fileID: 7400000, guid: 9d1bcc1b6f819e146b9853457f94d8bf, type: 2}
+    stand: {fileID: 7400000, guid: 0506ef52922c36f42ad27b91905cf4be, type: 2}
     fall: {fileID: 7400000, guid: f8bf9af3eb86be5478550323ae18c49c, type: 2}
     die: {fileID: 7400000, guid: c96efeb8b685fdd4ba6006db673db7fc, type: 2}
     shoot: {fileID: 7400000, guid: 8e7b93efcc5d7cd4c94d76ee15537f7d, type: 2}
@@ -898,7 +891,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1050701194
+--- !u!114 &1011500189905882650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -907,27 +900,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7967880215193007599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 47b580d87d9caf7438b676bb4049fc51, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 63fe6d9879ce7bf468c441d87af7b870, type: 2}
+    - {fileID: 11400000, guid: c82d9a6c1f4687f46bbccb6d712ddfbd, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7967880215193007596}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: EnableControls
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7967880215193007596}
+          m_TargetAssemblyTypeName: Player, Assembly-CSharp
+          m_MethodName: DisableControlsAndStopAnimancer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7967880215801092300
 GameObject:
   m_ObjectHideFlags: 0

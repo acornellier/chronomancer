@@ -33,9 +33,7 @@ public class Player : MonoBehaviour
     float _jumpingTimestamp;
     bool _isFalling;
     bool _willDieWhenGrounded;
-
     bool _isDucking;
-    bool _isDyingOrEndingLevel;
 
     readonly RaycastHit2D[] _hitBuffer = new RaycastHit2D[8];
 
@@ -50,7 +48,7 @@ public class Player : MonoBehaviour
 
     void OnEnable()
     {
-        _playerControls.Player.Enable();
+        EnableControls();
         _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
         _playerControls.Player.Duck.started += OnDuckInput;
         _playerControls.Player.Duck.performed += OnDuckInput;
@@ -61,19 +59,16 @@ public class Player : MonoBehaviour
 
     void OnDisable()
     {
-        _playerControls.Player.Disable();
+        DisableControls();
     }
 
     void Update()
     {
         _movementInput = 0;
-        if (_isDyingOrEndingLevel)
+        if (!_playerControls.Player.enabled)
             return;
 
-        if (Keyboard.current.aKey.IsPressed())
-            _movementInput = -1;
-        else if (Keyboard.current.dKey.IsPressed())
-            _movementInput = 1;
+        _movementInput = _playerControls.Player.Move.ReadValue<float>();
     }
 
     void FixedUpdate()
@@ -84,6 +79,22 @@ public class Player : MonoBehaviour
         UpdateDirection();
         UpdateShooting();
         UpdateAnimations();
+    }
+
+    void DisableControls()
+    {
+        _playerControls.Player.Disable();
+    }
+
+    public void DisableControlsAndStopAnimancer()
+    {
+        DisableControls();
+        _animancer.Stop();
+    }
+
+    public void EnableControls()
+    {
+        _playerControls.Player.Enable();
     }
 
     void OnFireInput(PlayerSpells.ShootType shootType)
@@ -173,7 +184,7 @@ public class Player : MonoBehaviour
 
     void UpdateAnimations()
     {
-        if (_isDyingOrEndingLevel)
+        if (!_playerControls.Player.enabled)
             return;
 
         if (_isDucking)
@@ -227,8 +238,7 @@ public class Player : MonoBehaviour
 
     IEnumerator CO_LevelEnd()
     {
-        _playerControls.Disable();
-        _isDyingOrEndingLevel = true;
+        DisableControls();
         yield return new WaitForSeconds(0.1f);
         _levelLoader.LoadNextScene();
         var state = _animancer.Play(animations.portalOut);
@@ -238,8 +248,7 @@ public class Player : MonoBehaviour
 
     IEnumerator CO_Die()
     {
-        _playerControls.Disable();
-        _isDyingOrEndingLevel = true;
+        DisableControls();
         var state = _animancer.Play(animations.die);
         yield return state;
         _levelLoader.ReloadScene();
@@ -265,6 +274,7 @@ public class Player : MonoBehaviour
         public AnimationClip walk;
         public AnimationClip jump;
         public AnimationClip duck;
+        public AnimationClip stand;
         public AnimationClip fall;
         public AnimationClip die;
         public AnimationClip shoot;

@@ -3,6 +3,8 @@ using Zenject;
 
 public class GameInstaller : MonoInstaller
 {
+    [SerializeField] bool fadeInLights = true;
+
     [Inject] LevelLoader _levelLoader;
 
     public override void InstallBindings()
@@ -12,6 +14,7 @@ public class GameInstaller : MonoInstaller
 
     public void Awake()
     {
-        _levelLoader.StartLevel();
+        if (fadeInLights)
+            _levelLoader.FadeInLights();
     }
 }

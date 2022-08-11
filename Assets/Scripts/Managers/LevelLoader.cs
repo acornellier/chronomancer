@@ -48,7 +48,7 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(FadeToScene(scene));
     }
 
-    public void StartLevel()
+    public void FadeInLights()
     {
         StartCoroutine(FadeAllLights(true));
     }
