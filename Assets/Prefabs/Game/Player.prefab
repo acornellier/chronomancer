@@ -482,13 +482,13 @@ MonoBehaviour:
     fallingGravityMultiplier: 1.5
     jumpInputBuffer: 0.15
     duckingSlow: 0.2
-    downwardVelocityDeath: -10
+    downwardVelocityDeath: -15
   animations:
     idle: {fileID: 7400000, guid: 1164a18ef428e4415befbc86f0f2b04b, type: 2}
     walk: {fileID: 7400000, guid: 8f3badfa9c1724ee6b5cb45c1d5a2c47, type: 2}
     jump: {fileID: 7400000, guid: b8f173440b4a94bd0a8f6d6ae093ab33, type: 2}
     duck: {fileID: 7400000, guid: 9d1bcc1b6f819e146b9853457f94d8bf, type: 2}
-    fall: {fileID: 7400000, guid: c68432a3987ae4bdbbe0f88a2025aef1, type: 2}
+    fall: {fileID: 7400000, guid: 0a93491a8b09f6f46880c18423464353, type: 2}
     die: {fileID: 7400000, guid: b9c992b1006534cf39f0b2ef60470763, type: 2}
     shoot: {fileID: 7400000, guid: 04dde65d1abe046b5ac7f91323909802, type: 2}
     portalOut: {fileID: 7400000, guid: c0b6992a4d65ed746983bf693c2ce60f, type: 2}

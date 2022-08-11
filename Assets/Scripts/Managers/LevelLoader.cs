@@ -16,11 +16,6 @@ public class LevelLoader : MonoBehaviour
         _playerControls = new PlayerInputActions();
     }
 
-    void Start()
-    {
-        StartCoroutine(StartLevel());
-    }
-
     void OnEnable()
     {
         _playerControls.Player.RestartLevel.Enable();
@@ -53,38 +48,30 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(FadeToScene(scene));
     }
 
-    IEnumerator StartLevel()
+    public void StartLevel()
     {
-        var lights = FindObjectsOfType<Light2D>();
-        var startingIntensities =
-            lights.ToDictionary(l => l, l => l.intensity);
-
-        foreach (var l in lights)
-        {
-            l.intensity = 0;
-        }
-
-        var t = 0f;
-        while (t < 1)
-        {
-            t += fadeRate * Time.deltaTime;
-            foreach (var l in lights)
-            {
-                l.intensity = Mathf.Lerp(0f, startingIntensities[l], t);
-            }
-
-            yield return null;
-        }
+        StartCoroutine(FadeAllLights(true));
     }
 
     IEnumerator FadeToScene(string scene)
     {
+        var asyncLoad = SceneManager.LoadSceneAsync(scene);
+        asyncLoad.allowSceneActivation = false;
+        yield return FadeAllLights(false);
+        asyncLoad.allowSceneActivation = true;
+    }
+
+    IEnumerator FadeAllLights(bool fadeIn)
+    {
         var lights = FindObjectsOfType<Light2D>();
-        var startingIntensities =
+        var initialIntensitites =
             lights.ToDictionary(l => l, l => l.intensity);
 
         foreach (var l in lights)
         {
+            if (fadeIn)
+                l.intensity = 0;
+
             var flicker = l.GetComponent<LightFlicker>();
             if (flicker)
                 flicker.enabled = false;
@@ -94,14 +81,19 @@ public class LevelLoader : MonoBehaviour
         while (t < 1)
         {
             t += fadeRate * Time.deltaTime;
+            if ((fadeIn && t < 0.5f) || (!fadeIn && t > 0.5f)) t += fadeRate * Time.deltaTime;
+
             foreach (var l in lights)
             {
-                l.intensity = Mathf.Lerp(startingIntensities[l], 0f, t);
+                var initialIntensity = initialIntensitites[l];
+                l.intensity = Mathf.Lerp(
+                    fadeIn ? 0f : initialIntensity,
+                    fadeIn ? initialIntensity : 0f,
+                    t
+                );
             }
 
             yield return null;
         }
-
-        SceneManager.LoadScene(scene);
     }
 }

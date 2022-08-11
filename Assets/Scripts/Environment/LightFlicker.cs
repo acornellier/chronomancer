@@ -22,9 +22,6 @@ public class LightFlicker : MonoBehaviour
 
     void Update()
     {
-        if (_light == null)
-            return;
-
         while (_smoothQueue.Count >= smoothing)
         {
             _lastSum -= _smoothQueue.Dequeue();

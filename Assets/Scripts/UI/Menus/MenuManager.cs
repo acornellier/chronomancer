@@ -13,7 +13,6 @@ public class MenuManager : IInitializable
     public void Initialize()
     {
         _playerControls = new PlayerInputActions();
-        _playerControls.UI.GoBack.Enable();
         _playerControls.UI.GoBack.performed += _ => OnPauseInput();
     }
 
@@ -32,6 +31,8 @@ public class MenuManager : IInitializable
 
     public void OpenMenu(GameObject menu)
     {
+        _playerControls.UI.GoBack.Enable();
+
         if (_menuStack.TryPeek(out var oldMenu))
             oldMenu.SetActive(false);
 
@@ -46,7 +47,10 @@ public class MenuManager : IInitializable
 
         GoBack();
         if (_menuStack.Count <= 0)
+        {
             _gameManager.SetState(GameState.Playing);
+            _playerControls.UI.GoBack.Disable();
+        }
     }
 
     public void GoBack()
