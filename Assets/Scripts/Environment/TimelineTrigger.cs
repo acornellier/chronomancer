@@ -6,8 +6,6 @@ public class TimelineTrigger : ColliderTrigger
 {
     PlayableDirector _playableDirector;
 
-    bool _triggered;
-
     void Awake()
     {
         _playableDirector = GetComponent<PlayableDirector>();
