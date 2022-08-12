@@ -13,9 +13,7 @@ public class ProjectInstaller : MonoInstaller
         Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<AudioManager>().AsSingle();
         Container.BindInterfacesAndSelfTo<MenuManager>().AsSingle();
-        Container.Bind<LevelLoader>().FromComponentInHierarchy().AsSingle();
-
-        Container.InstantiatePrefab(essentials);
+        Container.Bind<LevelLoader>().FromComponentInNewPrefab(essentials).AsSingle();
 
         Cursor.SetCursor(mouseCursor, hotSpot, CursorMode.Auto);
     }

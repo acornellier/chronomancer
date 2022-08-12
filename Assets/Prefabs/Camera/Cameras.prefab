@@ -164,15 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1489978558989397662, guid: 21bd7ded585ad874bb9516e8c716ddb7, type: 3}
       propertyPath: orthographic size
-      value: 9
+      value: 7.21875
       objectReference: {fileID: 0}
     - target: {fileID: 3836561649124754828, guid: 21bd7ded585ad874bb9516e8c716ddb7, type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3836561649124754828, guid: 21bd7ded585ad874bb9516e8c716ddb7, type: 3}
-      propertyPath: m_RefResolutionX
-      value: 720
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3836561649124754828, guid: 21bd7ded585ad874bb9516e8c716ddb7, type: 3}
       propertyPath: m_RefResolutionY

@@ -169,7 +169,7 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_AssetsPPU: 32
   m_RefResolutionX: 800
-  m_RefResolutionY: 500
+  m_RefResolutionY: 450
   m_CropFrame: 0
   m_GridSnapping: 0
   m_FilterMode: 0

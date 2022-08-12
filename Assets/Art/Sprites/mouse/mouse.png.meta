@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f5dc26f415fd79c4ebd221f52c1684be
+guid: 070430b1f2312ad4c9241d58322974ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -118,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cursor0
+      name: mouse0
       rect:
         serializedVersion: 2
         x: 1
         y: 1
-        width: 18
-        height: 18
+        width: 12
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d97bae0cd5c738bb0800000000000000
-      internalID: -4934964024557520995
+      spriteID: 0a6aaf3c64d6ccec0800000000000000
+      internalID: -3545338655944300896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse1
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00000000000000000800000000000000
+      internalID: 0
       vertices: []
       indices: 
       edges: []
@@ -149,8 +170,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cursor_0: 0
-      cursor0: -4934964024557520995
+      mouse0: -3545338655944300896
+      mouse1: 0
+      mouse_0: 0
+      mouse_1: 0
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

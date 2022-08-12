@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Security.Cryptography;
 using Animancer;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,6 +10,7 @@ using Zenject;
 [RequireComponent(typeof(AnimancerComponent))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] PlayerInput playerInput;
     [SerializeField] PlayerSpells playerSpells;
     [SerializeField] PlayerAudio playerAudio;
     [SerializeField] Stats stats;
@@ -23,14 +23,14 @@ public class Player : MonoBehaviour
     Rigidbody2D _body;
     AnimancerComponent _animancer;
     ContactFilter2D _groundMask;
-    PlayerInputActions _playerControls;
 
-    float _movementInput;
+    bool _duckInput;
     float _jumpInputTimestamp = float.NegativeInfinity;
     bool _shootInput;
     PlayerSpells.ShootType _shootType;
 
     bool _isGrounded;
+    bool _isCeilinged;
     bool _isJumping;
     float _jumpingTimestamp;
     bool _isFalling;
@@ -45,46 +45,41 @@ public class Player : MonoBehaviour
         _body = GetComponent<Rigidbody2D>();
         _animancer = GetComponent<AnimancerComponent>();
         _groundMask.layerMask = LayerMask.GetMask("Ground");
-        _playerControls = new PlayerInputActions();
+    }
+
+    void Start()
+    {
+        playerInput.actions.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
+        playerInput.actions.Player.Duck.started += OnDuckInput;
+        playerInput.actions.Player.Duck.performed += OnDuckInput;
+        playerInput.actions.Player.Duck.canceled += OnDuckInput;
+        playerInput.actions.Player.Fire1.performed +=
+            (_) => OnFireInput(PlayerSpells.ShootType.Type1);
+        playerInput.actions.Player.Fire2.performed +=
+            (_) => OnFireInput(PlayerSpells.ShootType.Type2);
     }
 
     void OnEnable()
     {
-        EnableControls();
         _gameManager.OnGamePauseChange += OnGamePauseChange;
-
-        _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
-        _playerControls.Player.Duck.started += OnDuckInput;
-        _playerControls.Player.Duck.performed += OnDuckInput;
-        _playerControls.Player.Duck.canceled += OnDuckInput;
-        _playerControls.Player.Fire1.performed += (_) => OnFireInput(PlayerSpells.ShootType.Type1);
-        _playerControls.Player.Fire2.performed += (_) => OnFireInput(PlayerSpells.ShootType.Type2);
     }
 
     void OnDisable()
     {
-        DisableControls();
         _gameManager.OnGamePauseChange += OnGamePauseChange;
     }
 
     void OnGamePauseChange(bool paused)
     {
-        if (paused) DisableControls();
-        else EnableControls();
-    }
-
-    void Update()
-    {
-        _movementInput = 0;
-        if (!_playerControls.Player.enabled)
-            return;
-
-        _movementInput = _playerControls.Player.Move.ReadValue<float>();
+        if (paused) playerInput.DisableControls();
+        else playerInput.EnableControls();
     }
 
     void FixedUpdate()
     {
+        print(transform.position);
         UpdateGrounded();
+        UpdateDucking();
         UpdateVelocity();
         UpdateJump();
         UpdateDirection();
@@ -92,20 +87,10 @@ public class Player : MonoBehaviour
         UpdateAnimations();
     }
 
-    void DisableControls()
-    {
-        _playerControls.Player.Disable();
-    }
-
     public void DisableControlsAndStopAnimancer()
     {
-        DisableControls();
+        playerInput.DisableControls();
         _animancer.Stop();
-    }
-
-    public void EnableControls()
-    {
-        _playerControls.Player.Enable();
     }
 
     void OnFireInput(PlayerSpells.ShootType shootType)
@@ -116,7 +101,7 @@ public class Player : MonoBehaviour
 
     void OnDuckInput(InputAction.CallbackContext ctx)
     {
-        _isDucking = ctx.ReadValueAsButton();
+        _duckInput = ctx.ReadValueAsButton();
     }
 
     void OnFootstep()
@@ -124,10 +109,26 @@ public class Player : MonoBehaviour
         playerAudio.Footstep();
     }
 
+    void UpdateGrounded()
+    {
+        _isGrounded = IsGrounded();
+        _isCeilinged = IsCeilinged();
+    }
+
+    void UpdateDucking()
+    {
+        _isDucking = _isDucking switch
+        {
+            true when !_duckInput && !_isCeilinged => false,
+            false when _duckInput => true,
+            _ => _isDucking,
+        };
+    }
+
     void UpdateVelocity()
     {
         var velocity = _body.velocity;
-        velocity.x = _movementInput * stats.walkSpeed;
+        velocity.x = playerInput.actions.Player.Move.ReadValue<float>() * stats.walkSpeed;
 
         if (_isDucking)
             velocity.x *= stats.duckingSlow;
@@ -136,13 +137,7 @@ public class Player : MonoBehaviour
         if (_isGrounded && !_isJumping && !_isFalling && velocity.y > 0)
             velocity.y = 0;
 
-        _movementInput = 0;
         _body.velocity = velocity;
-    }
-
-    void UpdateGrounded()
-    {
-        _isGrounded = IsGrounded();
     }
 
     bool IsGrounded()
@@ -152,6 +147,21 @@ public class Player : MonoBehaviour
         {
             var hit = _hitBuffer[hitIndex];
             if (Vector2.Angle(hit.normal, Vector2.up) < 60)
+                return true;
+        }
+
+        return false;
+    }
+
+    bool IsCeilinged()
+    {
+        var distance = stats.groundedEpsilon;
+        if (_isDucking) distance += stats.duckingHeightDifference;
+        var numHits = _collider.Cast(Vector2.up, _groundMask, _hitBuffer, distance);
+        for (var hitIndex = 0; hitIndex < numHits; hitIndex++)
+        {
+            var hit = _hitBuffer[hitIndex];
+            if (Vector2.Angle(hit.normal, Vector2.down) < 60)
                 return true;
         }
 
@@ -195,7 +205,7 @@ public class Player : MonoBehaviour
 
     void UpdateAnimations()
     {
-        if (!_playerControls.Player.enabled)
+        if (!playerInput.actions.Player.enabled)
             return;
 
         if (_isDucking)
@@ -239,6 +249,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        D.Log("Die", transform.position);
         StartCoroutine(CO_Die());
     }
 
@@ -249,7 +260,7 @@ public class Player : MonoBehaviour
 
     IEnumerator CO_LevelEnd()
     {
-        DisableControls();
+        playerInput.DisableControls();
         yield return new WaitForSeconds(0.1f);
         _levelLoader.LoadNextScene();
         var state = _animancer.Play(animations.portalOut);
@@ -259,7 +270,8 @@ public class Player : MonoBehaviour
 
     IEnumerator CO_Die()
     {
-        DisableControls();
+        _body.bodyType = RigidbodyType2D.Kinematic;
+        playerInput.DisableControls();
         var state = _animancer.Play(animations.die);
         yield return state;
         _levelLoader.ReloadScene();
@@ -276,6 +288,7 @@ public class Player : MonoBehaviour
         public float duckingSlow = 0.2f;
         public float downwardVelocityDeath = -10f;
         public float groundedEpsilon = 0.05f;
+        public float duckingHeightDifference = 1.3f;
     }
 
     [Serializable]
