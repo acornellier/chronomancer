@@ -10,7 +10,7 @@ public enum GameState
 
 public class GameManager : IInitializable
 {
-    public GameState state { get; private set; } = GameState.Playing;
+    public GameState State { get; private set; } = GameState.Playing;
     public event Action<bool> OnGamePauseChange;
 
     public void Initialize()
@@ -25,12 +25,12 @@ public class GameManager : IInitializable
             Time.timeScale = 0;
             OnGamePauseChange?.Invoke(true);
         }
-        else if (state == GameState.Paused)
+        else if (State == GameState.Paused)
         {
             Time.timeScale = 1;
             OnGamePauseChange?.Invoke(false);
         }
 
-        state = newState;
+        State = newState;
     }
 }

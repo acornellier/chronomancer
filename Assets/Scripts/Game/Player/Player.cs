@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Security.Cryptography;
 using Animancer;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] Animations animations;
 
     [Inject] LevelLoader _levelLoader;
+    [Inject] GameManager _gameManager;
 
     Collider2D _collider;
     Rigidbody2D _body;
@@ -49,6 +51,8 @@ public class Player : MonoBehaviour
     void OnEnable()
     {
         EnableControls();
+        _gameManager.OnGamePauseChange += OnGamePauseChange;
+
         _playerControls.Player.Jump.performed += (_) => _jumpInputTimestamp = Time.time;
         _playerControls.Player.Duck.started += OnDuckInput;
         _playerControls.Player.Duck.performed += OnDuckInput;
@@ -60,6 +64,13 @@ public class Player : MonoBehaviour
     void OnDisable()
     {
         DisableControls();
+        _gameManager.OnGamePauseChange += OnGamePauseChange;
+    }
+
+    void OnGamePauseChange(bool paused)
+    {
+        if (paused) DisableControls();
+        else EnableControls();
     }
 
     void Update()

@@ -30,7 +30,7 @@ public class PauseMenu : Menu
 
     void OnPauseInput()
     {
-        if (_gameManager.state != GameState.Paused)
+        if (_gameManager.State != GameState.Paused)
             _gameManager.SetState(GameState.Paused);
     }
 

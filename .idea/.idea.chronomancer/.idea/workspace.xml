@@ -6,17 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="5f228a16-d995-4c11-8e1d-e42d2dd96aad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.chronomancer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0/Intro.playable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level0/Intro.playable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5/GoingOutside.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5/GoingOutside.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/AudioTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/AudioTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/CinemachineSwitcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/CinemachineSwitcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Environment/TimelineTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Environment/TimelineTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Fonts/LavishlyYours-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Fonts/LavishlyYours-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard.ase" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_stand.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/wizard/wizard_stand.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Essentials.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Essentials.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/VolumeSlider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/VolumeSlider.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/StartMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menus/StartMenu.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +77,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "rider.code.cleanup.on.save": "true",
     "rider.code.cleanup.on.save.profile": "Built-in: Reformat & Apply Syntax Style",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -122,7 +129,7 @@
       <updated>1659727441188</updated>
       <workItem from="1659727453304" duration="17196000" />
       <workItem from="1660170169806" duration="3708000" />
-      <workItem from="1660177858555" duration="27274000" />
+      <workItem from="1660177858555" duration="30556000" />
     </task>
     <servers />
   </component>

@@ -8349,6 +8349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b5fc6a47924e33bc34437745a16d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeInLights: 1
 --- !u!114 &1518704443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22792,11 +22793,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8255289063454597512, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.3803039
+      value: 1.3837218
       objectReference: {fileID: 0}
     - target: {fileID: 8255289063454597512, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9732051
+      value: 1.9731894
       objectReference: {fileID: 0}
     - target: {fileID: 8266685287859143404, guid: 5ad829546fcc97341918e0b40d04e878, type: 3}
       propertyPath: m_Follow
