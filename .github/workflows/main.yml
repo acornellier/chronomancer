@@ -42,6 +42,6 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: html5
-          ITCH_GAME: avalanche
+          ITCH_GAME: chronomancer
           ITCH_USER: acornellier
           PACKAGE: build/WebGL
