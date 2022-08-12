@@ -81,7 +81,6 @@ public class LevelLoader : MonoBehaviour
         while (t < 1)
         {
             t += fadeRate * Time.deltaTime;
-            if ((fadeIn && t < 0.5f) || (!fadeIn && t > 0.5f)) t += fadeRate * Time.deltaTime;
 
             foreach (var l in lights)
             {
