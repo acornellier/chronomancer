@@ -77,7 +77,6 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        print(transform.position);
         UpdateGrounded();
         UpdateDucking();
         UpdateVelocity();
@@ -121,7 +120,7 @@ public class Player : MonoBehaviour
         {
             true when !_duckInput && !_isCeilinged => false,
             false when _duckInput => true,
-            _ => _isDucking,
+            _ => _isDucking
         };
     }
 
